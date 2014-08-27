@@ -25,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.toolbar setAlpha:0.0];
     _pageImages = @[@"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1",@"image1",@"image1",@"image1",@"image1",@"image1",@"image1"];
     
     // Create page view controller
@@ -43,7 +44,9 @@
     [self.view addSubview:_pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
     // Do any additional setup after loading the view from its nib.
-    
+    UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    recognizer.delegate = contentViewController;
+    [contentViewController.view addGestureRecognizer:recognizer];
 
 
 }
@@ -61,6 +64,44 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)handleTap:(id)sender{
+    if(self.toolbar.alpha <= 0.0){
+        [self startFadeIn];
+    }else{
+        [self startFadeOut];
+    }
+}
+
+-(void)startFadeOut{
+    
+    [self.toolbar setAlpha:1.0f];
+    
+    //fade in
+    [UIView animateWithDuration:0.8f animations:^{
+        
+        [self.toolbar setAlpha:0.0f];
+        
+    } completion:^(BOOL finished) {
+
+        
+    }];
+}
+
+-(void)startFadeIn{
+    
+    [self.toolbar setAlpha:0.0f];
+    
+    //fade in
+    [UIView animateWithDuration:0.8f animations:^{
+        
+        [self.toolbar setAlpha:1.0f];
+        
+    } completion:^(BOOL finished) {
+        
+        
+    }];
+}
+
 - (PageContentViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     if (([self.pageImages count] == 0) || (index >= [self.pageImages count])) {
@@ -72,6 +113,9 @@
     pageContentViewController.imageFile = self.pageImages[index];
     pageContentViewController.pageIndex = index;
     contentViewController = pageContentViewController;
+    UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    recognizer.delegate = contentViewController;
+    [contentViewController.view addGestureRecognizer:recognizer];
     return pageContentViewController;
 }
 
