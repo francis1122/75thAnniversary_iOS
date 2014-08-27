@@ -8,9 +8,12 @@
 
 #import "DetailViewController.h"
 #import "PageContentViewController.h"
+#import "Social/Social.h"
+
 
 @interface DetailViewController (){
     PageContentViewController *contentViewController;
+    AVAudioPlayer *currentPlayer;
 }
 @end
 
@@ -25,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self.toolbar setAlpha:0.0];
     _pageImages = @[@"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1",@"image1",@"image1",@"image1",@"image1",@"image1",@"image1"];
     
@@ -47,8 +51,6 @@
     UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     recognizer.delegate = contentViewController;
     [contentViewController.view addGestureRecognizer:recognizer];
-
-
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -108,14 +110,29 @@
         return nil;
     }
     
+    [currentPlayer stop];
+    
     // Create a new view controller and pass suitable data.
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     pageContentViewController.imageFile = self.pageImages[index];
     pageContentViewController.pageIndex = index;
+    
     contentViewController = pageContentViewController;
+    
     UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     recognizer.delegate = contentViewController;
     [contentViewController.view addGestureRecognizer:recognizer];
+    
+    
+    NSString *audioPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"audio%d", 1] ofType:@"mp3"];
+    NSError *error;
+    AVAudioPlayer * _backgroundMusicPlayer;
+    _backgroundMusicPlayer = [[AVAudioPlayer alloc]
+                              initWithContentsOfURL:[NSURL URLWithString:audioPath] error:&error];
+    [_backgroundMusicPlayer play];
+    
+    currentPlayer = _backgroundMusicPlayer;
+    
     return pageContentViewController;
 }
 
@@ -174,11 +191,67 @@
 }
 
 -(IBAction)facebookButtonTouched:(id)sender{
+    SLComposeViewController *fbController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     
+    
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewControllerCompletionHandler __block completionHandler=^(SLComposeViewControllerResult result){
+            
+            [fbController dismissViewControllerAnimated:YES completion:nil];
+            
+            switch(result){
+                case SLComposeViewControllerResultCancelled:
+                default:
+                {
+                    NSLog(@"Cancelled.....");
+                    
+                }
+                    break;
+                case SLComposeViewControllerResultDone:
+                {
+                    NSLog(@"Posted....");
+                }
+                    break;
+            }};
+        
+        [fbController addImage:[UIImage imageNamed:@"1.jpg"]];
+        [fbController setInitialText:@"Check out this article."];
+        [fbController addURL:[NSURL URLWithString:@"http://soulwithmobiletechnology.blogspot.com/"]];
+        [fbController setCompletionHandler:completionHandler];
+        [self presentViewController:fbController animated:YES completion:nil];
+    }
 }
 
 -(IBAction)twitterButtonTouched:(id)sender{
+    SLComposeViewController *twitterController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
     
+    
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewControllerCompletionHandler __block completionHandler=^(SLComposeViewControllerResult result){
+            
+            [twitterController dismissViewControllerAnimated:YES completion:nil];
+            
+            switch(result){
+                case SLComposeViewControllerResultCancelled:
+                default:
+                {
+                    NSLog(@"Cancelled.....");
+                    
+                }
+                    break;
+                case SLComposeViewControllerResultDone:
+                {
+                    NSLog(@"Posted....");
+                }
+                    break;
+            }};
+        
+        [twitterController setInitialText:@"Check out this article."];
+        [twitterController setCompletionHandler:completionHandler];
+        [self presentViewController:twitterController animated:YES completion:nil];
+    }
 }
 
 
