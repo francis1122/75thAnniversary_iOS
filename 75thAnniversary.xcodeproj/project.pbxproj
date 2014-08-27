@@ -21,10 +21,13 @@
 		5A77CAAB19AD5730007B3C77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A77CA8D19AD5730007B3C77 /* UIKit.framework */; };
 		5A77CAB319AD5730007B3C77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A77CAB119AD5730007B3C77 /* InfoPlist.strings */; };
 		5A77CAB519AD5730007B3C77 /* _5thAnniversaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A77CAB419AD5730007B3C77 /* _5thAnniversaryTests.m */; };
+		F210526619AE70D200733590 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F210526519AE70D200733590 /* PageContentViewController.m */; };
+		F243A98E19AE69B200EB8CBB /* iconVideoFacebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */; };
+		F243A98F19AE69B200EB8CBB /* iconVideoTwitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */; };
 		F2B92DCC19AD719600A49BA1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B92DCA19AD719600A49BA1 /* DetailViewController.m */; };
 		F2B92DCF19AD769A00A49BA1 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B92DCE19AD769A00A49BA1 /* placeholder@2x.png */; };
 		F2B92DD119AD780A00A49BA1 /* google@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B92DD019AD780A00A49BA1 /* google@2x.png */; };
-		F2B92DD519AD7E4200A49BA1 /* image_1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2B92DD419AD7E4200A49BA1 /* image_1@2x.jpg */; };
+		F2B92DD519AD7E4200A49BA1 /* image1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2B92DD419AD7E4200A49BA1 /* image1@2x.jpg */; };
 		F2C023A119AD89820019663B /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C023A019AD89820019663B /* CustomSegue.m */; };
 /* End PBXBuildFile section */
 
@@ -58,11 +61,15 @@
 		5A77CAB019AD5730007B3C77 /* 75thAnniversaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "75thAnniversaryTests-Info.plist"; sourceTree = "<group>"; };
 		5A77CAB219AD5730007B3C77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5A77CAB419AD5730007B3C77 /* _5thAnniversaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _5thAnniversaryTests.m; sourceTree = "<group>"; };
+		F210526419AE70D200733590 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		F210526519AE70D200733590 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVideoFacebook@2x.png"; sourceTree = "<group>"; };
+		F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVideoTwitter@2x.png"; sourceTree = "<group>"; };
 		F2B92DC919AD719600A49BA1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F2B92DCA19AD719600A49BA1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F2B92DCE19AD769A00A49BA1 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 		F2B92DD019AD780A00A49BA1 /* google@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google@2x.png"; sourceTree = "<group>"; };
-		F2B92DD419AD7E4200A49BA1 /* image_1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image_1@2x.jpg"; sourceTree = "<group>"; };
+		F2B92DD419AD7E4200A49BA1 /* image1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image1@2x.jpg"; sourceTree = "<group>"; };
 		F2C0239F19AD89820019663B /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
 		F2C023A019AD89820019663B /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,14 +137,18 @@
 				5A77CA9E19AD5730007B3C77 /* ViewController.h */,
 				5A77CA9F19AD5730007B3C77 /* ViewController.m */,
 				5A77CAA119AD5730007B3C77 /* Images.xcassets */,
+				F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */,
+				F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */,
 				F2B92DD019AD780A00A49BA1 /* google@2x.png */,
 				F2B92DCE19AD769A00A49BA1 /* placeholder@2x.png */,
-				F2B92DD419AD7E4200A49BA1 /* image_1@2x.jpg */,
+				F2B92DD419AD7E4200A49BA1 /* image1@2x.jpg */,
 				5A77CA9019AD5730007B3C77 /* Supporting Files */,
 				F2B92DC919AD719600A49BA1 /* DetailViewController.h */,
 				F2B92DCA19AD719600A49BA1 /* DetailViewController.m */,
 				F2C0239F19AD89820019663B /* CustomSegue.h */,
 				F2C023A019AD89820019663B /* CustomSegue.m */,
+				F210526419AE70D200733590 /* PageContentViewController.h */,
+				F210526519AE70D200733590 /* PageContentViewController.m */,
 			);
 			path = 75thAnniversary;
 			sourceTree = "<group>";
@@ -249,10 +260,12 @@
 			files = (
 				5A77CAA219AD5730007B3C77 /* Images.xcassets in Resources */,
 				F2B92DCF19AD769A00A49BA1 /* placeholder@2x.png in Resources */,
-				F2B92DD519AD7E4200A49BA1 /* image_1@2x.jpg in Resources */,
+				F2B92DD519AD7E4200A49BA1 /* image1@2x.jpg in Resources */,
 				5A77CA9419AD5730007B3C77 /* InfoPlist.strings in Resources */,
 				F2B92DD119AD780A00A49BA1 /* google@2x.png in Resources */,
+				F243A98E19AE69B200EB8CBB /* iconVideoFacebook@2x.png in Resources */,
 				5A77CA9D19AD5730007B3C77 /* Main.storyboard in Resources */,
+				F243A98F19AE69B200EB8CBB /* iconVideoTwitter@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +289,7 @@
 				5A77CA9619AD5730007B3C77 /* main.m in Sources */,
 				F2B92DCC19AD719600A49BA1 /* DetailViewController.m in Sources */,
 				F2C023A119AD89820019663B /* CustomSegue.m in Sources */,
+				F210526619AE70D200733590 /* PageContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

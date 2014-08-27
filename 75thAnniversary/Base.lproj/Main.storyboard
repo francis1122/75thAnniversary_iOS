@@ -47,27 +47,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HB8-C2-PhV">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.6714473084" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DAI-cN-qb6">
+                                <rect key="frame" x="0.0" y="288" width="568" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="mjV-4b-fzr"/>
+                                    <barButtonItem style="plain" systemItem="fixedSpace" id="BZL-pZ-0Jh"/>
+                                    <barButtonItem width="238" style="plain" systemItem="fixedSpace" id="UzJ-Rl-UWL"/>
+                                    <barButtonItem systemItem="play" id="rXG-BN-8fr"/>
+                                    <barButtonItem width="208" style="plain" systemItem="fixedSpace" id="DW8-TH-TA2"/>
+                                    <barButtonItem image="iconVideoTwitter.png" style="plain" id="gQF-v9-YSF"/>
+                                    <barButtonItem width="13" style="plain" systemItem="fixedSpace" id="MWJ-lL-Gqa"/>
+                                    <barButtonItem image="iconVideoFacebook.png" id="uHU-UT-g6x"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Tsg-Y9-bKk"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="imageView" destination="HB8-C2-PhV" id="Tuz-ah-qi7"/>
+                        <outlet property="toolbar" destination="DAI-cN-qb6" id="nvz-wa-yjg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PG-f5-KgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="340" y="761"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Lv2-rf-MHr">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="0nN-1B-2iP" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2T-KJ-YrZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="761"/>
+        </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="5Bx-rY-azW">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="OKp-qU-2ye" customClass="PageContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cvH-Pt-y1c"/>
+                        <viewControllerLayoutGuide type="bottom" id="ALS-z9-w7y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BKV-zd-9fu">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5IN-qc-g4R">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="5IN-qc-g4R" id="obV-Rl-Npv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IiI-C7-JHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="1172"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="image_1.jpg" width="568" height="378"/>
+        <image name="iconVideoFacebook.png" width="9" height="18"/>
+        <image name="iconVideoTwitter.png" width="17" height="13"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

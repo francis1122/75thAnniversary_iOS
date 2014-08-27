@@ -36,7 +36,7 @@
         button.backgroundColor = [UIColor blackColor];
         [button setImage:image forState:UIControlStateNormal];
         [button addTarget:self action:@selector(thumbnailTouched:) forControlEvents:UIControlEventTouchUpInside];
-        
+        button.tag = i+1;
         
         
         [button setFrame:CGRectMake(20+((image.size.width+6)*(i%4)), 10+((image.size.height+6)*(i/4)), image.size.width, image.size.height)];
@@ -49,14 +49,14 @@
 }
 
 -(void)thumbnailTouched:(id)sender{
-    [self performSegueWithIdentifier:@"transition" sender:self];
+    [self performSegueWithIdentifier:@"transition" sender:sender];
 
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"transition"]) {
         DetailViewController *DVC = (DetailViewController*)segue.destinationViewController;
-        DVC.image = [UIImage imageNamed:@"image_1.jpg"];
+        DVC.index = ((UIButton*)sender).tag;
         
         
         
