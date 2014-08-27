@@ -50,14 +50,30 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DAI-cN-qb6">
                                 <rect key="frame" x="0.0" y="288" width="568" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="pause" id="mjV-4b-fzr"/>
+                                    <barButtonItem systemItem="pause" id="mjV-4b-fzr">
+                                        <connections>
+                                            <action selector="backButtonTouched:" destination="idG-LH-VDK" id="rqz-ie-Tma"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="fixedSpace" id="BZL-pZ-0Jh"/>
                                     <barButtonItem width="238" style="plain" systemItem="fixedSpace" id="UzJ-Rl-UWL"/>
-                                    <barButtonItem systemItem="play" id="rXG-BN-8fr"/>
+                                    <barButtonItem systemItem="play" id="rXG-BN-8fr">
+                                        <connections>
+                                            <action selector="playPauseButtonTouched:" destination="idG-LH-VDK" id="UfJ-HP-Hwt"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="208" style="plain" systemItem="fixedSpace" id="DW8-TH-TA2"/>
-                                    <barButtonItem image="iconVideoTwitter.png" style="plain" id="gQF-v9-YSF"/>
+                                    <barButtonItem image="iconVideoTwitter.png" style="plain" id="gQF-v9-YSF">
+                                        <connections>
+                                            <action selector="twitterButtonTouched:" destination="idG-LH-VDK" id="qn6-pj-D52"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="13" style="plain" systemItem="fixedSpace" id="MWJ-lL-Gqa"/>
-                                    <barButtonItem image="iconVideoFacebook.png" id="uHU-UT-g6x"/>
+                                    <barButtonItem image="iconVideoFacebook.png" id="uHU-UT-g6x">
+                                        <connections>
+                                            <action selector="facebookButtonTouched:" destination="idG-LH-VDK" id="Gf3-zF-yNZ"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -66,7 +82,11 @@
                     <navigationItem key="navigationItem" id="Tsg-Y9-bKk"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="backButton" destination="mjV-4b-fzr" id="GRB-zu-Krn"/>
+                        <outlet property="facebookButton" destination="uHU-UT-g6x" id="Nwg-uO-RLC"/>
+                        <outlet property="playPauseButton" destination="rXG-BN-8fr" id="Q03-wj-P1I"/>
                         <outlet property="toolbar" destination="DAI-cN-qb6" id="nvz-wa-yjg"/>
+                        <outlet property="twitterButton" destination="gQF-v9-YSF" id="Wwb-Dz-JkD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PG-f5-KgW" userLabel="First Responder" sceneMemberID="firstResponder"/>

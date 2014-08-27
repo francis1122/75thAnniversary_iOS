@@ -10,7 +10,7 @@
 #import "PageContentViewController.h"
 
 @interface DetailViewController (){
-
+    PageContentViewController *contentViewController;
 }
 @end
 
@@ -43,6 +43,8 @@
     [self.view addSubview:_pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
     // Do any additional setup after loading the view from its nib.
+    
+
 
 }
 
@@ -69,7 +71,7 @@
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     pageContentViewController.imageFile = self.pageImages[index];
     pageContentViewController.pageIndex = index;
-    
+    contentViewController = pageContentViewController;
     return pageContentViewController;
 }
 
@@ -84,6 +86,7 @@
     }
     
     index--;
+    [contentViewController.backgroundMusicPlayer stop];
     return [self viewControllerAtIndex:index];
 }
 
@@ -99,6 +102,7 @@
     if (index == [self.pageImages count]) {
         return nil;
     }
+    [contentViewController.backgroundMusicPlayer stop];
     return [self viewControllerAtIndex:index];
 }
 
@@ -110,6 +114,27 @@
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
 {
     return 0;
+}
+
+-(IBAction)backButtonTouched:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)playPauseButtonTouched:(id)sender{
+    if ([contentViewController.backgroundMusicPlayer isPlaying]) {
+        [contentViewController.backgroundMusicPlayer pause];
+    }else{
+        [contentViewController.backgroundMusicPlayer play];
+    }
+    
+}
+
+-(IBAction)facebookButtonTouched:(id)sender{
+    
+}
+
+-(IBAction)twitterButtonTouched:(id)sender{
+    
 }
 
 

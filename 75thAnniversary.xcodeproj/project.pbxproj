@@ -22,6 +22,7 @@
 		5A77CAB319AD5730007B3C77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A77CAB119AD5730007B3C77 /* InfoPlist.strings */; };
 		5A77CAB519AD5730007B3C77 /* _5thAnniversaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A77CAB419AD5730007B3C77 /* _5thAnniversaryTests.m */; };
 		F210526619AE70D200733590 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F210526519AE70D200733590 /* PageContentViewController.m */; };
+		F210526819AE7C3500733590 /* audio1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F210526719AE7C3500733590 /* audio1.mp3 */; };
 		F243A98E19AE69B200EB8CBB /* iconVideoFacebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */; };
 		F243A98F19AE69B200EB8CBB /* iconVideoTwitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */; };
 		F2B92DCC19AD719600A49BA1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B92DCA19AD719600A49BA1 /* DetailViewController.m */; };
@@ -63,6 +64,7 @@
 		5A77CAB419AD5730007B3C77 /* _5thAnniversaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _5thAnniversaryTests.m; sourceTree = "<group>"; };
 		F210526419AE70D200733590 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		F210526519AE70D200733590 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		F210526719AE7C3500733590 /* audio1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio1.mp3; sourceTree = "<group>"; };
 		F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVideoFacebook@2x.png"; sourceTree = "<group>"; };
 		F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVideoTwitter@2x.png"; sourceTree = "<group>"; };
 		F2B92DC919AD719600A49BA1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				F2B92DD019AD780A00A49BA1 /* google@2x.png */,
 				F2B92DCE19AD769A00A49BA1 /* placeholder@2x.png */,
 				F2B92DD419AD7E4200A49BA1 /* image1@2x.jpg */,
+				F210526719AE7C3500733590 /* audio1.mp3 */,
 				5A77CA9019AD5730007B3C77 /* Supporting Files */,
 				F2B92DC919AD719600A49BA1 /* DetailViewController.h */,
 				F2B92DCA19AD719600A49BA1 /* DetailViewController.m */,
@@ -229,7 +232,11 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = LastLevelLLC;
 				TargetAttributes = {
+					5A77CA8519AD5730007B3C77 = {
+						DevelopmentTeam = 3P72J4M974;
+					};
 					5A77CAA619AD5730007B3C77 = {
+						DevelopmentTeam = 3P72J4M974;
 						TestTargetID = 5A77CA8519AD5730007B3C77;
 					};
 				};
@@ -261,6 +268,7 @@
 				5A77CAA219AD5730007B3C77 /* Images.xcassets in Resources */,
 				F2B92DCF19AD769A00A49BA1 /* placeholder@2x.png in Resources */,
 				F2B92DD519AD7E4200A49BA1 /* image1@2x.jpg in Resources */,
+				F210526819AE7C3500733590 /* audio1.mp3 in Resources */,
 				5A77CA9419AD5730007B3C77 /* InfoPlist.strings in Resources */,
 				F2B92DD119AD780A00A49BA1 /* google@2x.png in Resources */,
 				F243A98E19AE69B200EB8CBB /* iconVideoFacebook@2x.png in Resources */,
@@ -355,6 +363,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -373,6 +382,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "874cb931-8831-4e93-8491-411fb2d1cb5c";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -393,6 +403,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -404,6 +415,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "874cb931-8831-4e93-8491-411fb2d1cb5c";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -414,10 +426,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversary/75thAnniversary-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -427,10 +442,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversary/75thAnniversary-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -439,6 +457,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -452,6 +472,7 @@
 				);
 				INFOPLIST_FILE = "75thAnniversaryTests/75thAnniversaryTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -461,6 +482,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -470,6 +493,7 @@
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversaryTests/75thAnniversaryTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
