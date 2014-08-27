@@ -14,6 +14,7 @@
 @interface DetailViewController (){
     PageContentViewController *contentViewController;
     AVAudioPlayer *currentPlayer;
+    
 }
 @end
 
@@ -37,9 +38,12 @@
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.dataSource = self;
     
-    PageContentViewController *startingViewController = [self viewControllerAtIndex:0];
+    
+    PageContentViewController *startingViewController = [self viewControllerAtIndex:self.index];
     NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:^(BOOL finished) {
+        [currentPlayer stop];
+    }];
     
     // Change the size of page view controller
     self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height+37);
@@ -110,7 +114,9 @@
         return nil;
     }
     
+    [currentPlayer pause];
     [currentPlayer stop];
+    currentPlayer = nil;
     
     // Create a new view controller and pass suitable data.
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
@@ -124,7 +130,7 @@
     [contentViewController.view addGestureRecognizer:recognizer];
     
     
-    NSString *audioPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"audio%d", 1] ofType:@"mp3"];
+    NSString *audioPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"audio%d", (int)index+1] ofType:@"mp3"];
     NSError *error;
     AVAudioPlayer * _backgroundMusicPlayer;
     _backgroundMusicPlayer = [[AVAudioPlayer alloc]
@@ -137,6 +143,7 @@
 }
 
 #pragma mark - Page View Controller Data Source
+
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
