@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface PageContentViewController : UIViewController<AVAudioPlayerDelegate, AVAudioSessionDelegate>
+@interface PageContentViewController : UIViewController<AVAudioPlayerDelegate, AVAudioSessionDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) AVAudioPlayer * backgroundMusicPlayer;

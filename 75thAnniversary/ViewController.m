@@ -43,10 +43,21 @@
         [self.scrollview addSubview:button];
         [self.scrollview setContentSize:CGSizeMake(320, 10+(image.size.height+6)*((i/4)+1))];
     }
+    
+    
+    
 }
 
 -(void)thumbnailTouched:(id)sender{
     [self performSegueWithIdentifier:@"transition" sender:sender];
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"transition"]) {
+        DetailViewController *DVC = (DetailViewController*)segue.destinationViewController;
+        DVC.index = ((UIButton*)sender).tag;
+    }
 }
 
 -(IBAction)donateButtonTouched:(id)sender{

@@ -41,21 +41,8 @@
 
     self.backgroundImageView.image = image;
     self.titleLabel.text = self.titleText;
-    
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    audioSession.delegate = self;
-    [audioSession setActive:YES error:nil];
-    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
-    
-    
-    NSString *audioPath = [[NSBundle mainBundle] pathForResource:@"audio1" ofType:@"mp3"];
-    NSError *error;
-    _backgroundMusicPlayer = [[AVAudioPlayer alloc]
-                              initWithContentsOfURL:[NSURL URLWithString:audioPath] error:&error];
-    [_backgroundMusicPlayer prepareToPlay];
-    [_backgroundMusicPlayer play];
-
 }
+
 
 - (void)didReceiveMemoryWarning
 {

@@ -13,6 +13,8 @@
 
 @interface DetailViewController (){
     PageContentViewController *contentViewController;
+    AVAudioPlayer *currentPlayer;
+    
 }
 @end
 
@@ -27,6 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.toolbar setAlpha:0.0];
     _pageImages = @[@"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1",@"image1",@"image1",@"image1",@"image1",@"image1",@"image1"];
     
     // Create page view controller
@@ -34,9 +38,12 @@
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.dataSource = self;
     
-    PageContentViewController *startingViewController = [self viewControllerAtIndex:0];
+    
+    PageContentViewController *startingViewController = [self viewControllerAtIndex:self.index];
     NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:^(BOOL finished) {
+        [currentPlayer stop];
+    }];
     
     // Change the size of page view controller
     self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height+37);
@@ -45,6 +52,9 @@
     [self.view addSubview:_pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
     // Do any additional setup after loading the view from its nib.
+    UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    recognizer.delegate = contentViewController;
+    [contentViewController.view addGestureRecognizer:recognizer];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -60,21 +70,80 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)handleTap:(id)sender{
+    if(self.toolbar.alpha <= 0.0){
+        [self startFadeIn];
+    }else{
+        [self startFadeOut];
+    }
+}
+
+-(void)startFadeOut{
+    
+    [self.toolbar setAlpha:1.0f];
+    
+    //fade in
+    [UIView animateWithDuration:0.8f animations:^{
+        
+        [self.toolbar setAlpha:0.0f];
+        
+    } completion:^(BOOL finished) {
+
+        
+    }];
+}
+
+-(void)startFadeIn{
+    
+    [self.toolbar setAlpha:0.0f];
+    
+    //fade in
+    [UIView animateWithDuration:0.8f animations:^{
+        
+        [self.toolbar setAlpha:1.0f];
+        
+    } completion:^(BOOL finished) {
+        
+        
+    }];
+}
+
 - (PageContentViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     if (([self.pageImages count] == 0) || (index >= [self.pageImages count])) {
         return nil;
     }
     
+    [currentPlayer pause];
+    [currentPlayer stop];
+    currentPlayer = nil;
+    
     // Create a new view controller and pass suitable data.
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     pageContentViewController.imageFile = self.pageImages[index];
     pageContentViewController.pageIndex = index;
+    
     contentViewController = pageContentViewController;
+    
+    UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    recognizer.delegate = contentViewController;
+    [contentViewController.view addGestureRecognizer:recognizer];
+    
+    
+    NSString *audioPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"audio%d", (int)index+1] ofType:@"mp3"];
+    NSError *error;
+    AVAudioPlayer * _backgroundMusicPlayer;
+    _backgroundMusicPlayer = [[AVAudioPlayer alloc]
+                              initWithContentsOfURL:[NSURL URLWithString:audioPath] error:&error];
+    [_backgroundMusicPlayer play];
+    
+    currentPlayer = _backgroundMusicPlayer;
+    
     return pageContentViewController;
 }
 
 #pragma mark - Page View Controller Data Source
+
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
