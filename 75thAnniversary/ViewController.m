@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -17,13 +18,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self setupGrid];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)setupGrid{
+    for (int i = 0; i<20; ++i) {
+        
+        UIImage *image = [UIImage imageNamed:@"google"];
+        NSLog(@"%f, %f", image.size.width, image.size.height);
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.backgroundColor = [UIColor blackColor];
+        [button setImage:image forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(thumbnailTouched:) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+        
+        [button setFrame:CGRectMake(20+((image.size.width+6)*(i%4)), 10+((image.size.height+6)*(i/4)), image.size.width, image.size.height)];
+        [self.scrollview addSubview:button];
+        [self.scrollview setContentSize:CGSizeMake(320, 10+(image.size.height+6)*((i/4)+1))];
+    }
+    
+    
+    
+}
+
+-(void)thumbnailTouched:(id)sender{
+    [self performSegueWithIdentifier:@"transition" sender:self];
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"transition"]) {
+        DetailViewController *DVC = (DetailViewController*)segue.destinationViewController;
+        DVC.image = [UIImage imageNamed:@"image_1.jpg"];
+        
+        
+        
+    }
 }
 
 @end
