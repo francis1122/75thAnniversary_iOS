@@ -201,7 +201,7 @@
                             @"Share on Twitter",
                             nil];
     popup.tag = 1;
-    [popup showInView:[UIApplication sharedApplication].keyWindow];
+    [popup showInView:self.view];
 }
 
 - (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
