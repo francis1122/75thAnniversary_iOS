@@ -251,7 +251,7 @@
             }};
         
         NSInteger currentIndex = contentViewController.pageIndex;
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",(NSString*)[self.pageImages objectAtIndex:currentIndex]]];
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",((NSArray*)self.pageImages[currentIndex])[0]]];
         [fbController addImage:image];
         [fbController setInitialText:@"Enjoying the 75th Anniversary Celebration Photo Exhibition. #allhands75"];
         [fbController addURL:[NSURL URLWithString:@"https://www.facebook.com/EpiscopalRelief"]];
@@ -285,7 +285,7 @@
                     break;
             }};
         NSInteger currentIndex = contentViewController.pageIndex;
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",(NSString*)[self.pageImages objectAtIndex:currentIndex]]];
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",((NSArray*)self.pageImages[currentIndex])[0]]];
         [twitterController addImage:image];
         [twitterController setInitialText:@"Enjoying the @EpiscopalRelief 75th Anniversary Photo Exhibition. #allhands75"];
 
