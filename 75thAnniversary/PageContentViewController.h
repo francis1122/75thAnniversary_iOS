@@ -15,5 +15,5 @@
 @property (nonatomic, strong) AVAudioPlayer * backgroundMusicPlayer;
 @property NSUInteger pageIndex;
 @property NSString *titleText;
-@property NSString *imageFile;
+@property (nonatomic, strong) NSMutableArray *imageFiles;
 @end
