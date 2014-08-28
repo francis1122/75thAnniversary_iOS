@@ -50,6 +50,8 @@
     [self.view addSubview:_pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
     // Do any additional setup after loading the view from its nib.
+
+    contentViewController = startingViewController;
     UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     recognizer.delegate = contentViewController;
     [contentViewController.view addGestureRecognizer:recognizer];
@@ -119,9 +121,7 @@
     
     //contentViewController = pageContentViewController;
     
-    UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-    recognizer.delegate = contentViewController;
-    [contentViewController.view addGestureRecognizer:recognizer];
+
     
     return pageContentViewController;
 }
@@ -162,6 +162,9 @@
     if (pendingViewControllers.count >0) {
         PageContentViewController *PCVC = [pendingViewControllers objectAtIndex:0];
         contentViewController = PCVC;
+        UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+        recognizer.delegate = contentViewController;
+        [contentViewController.view addGestureRecognizer:recognizer];
     }
 }
 
