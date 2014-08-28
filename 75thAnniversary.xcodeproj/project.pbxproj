@@ -42,43 +42,11 @@
 		F210528C19AE8F0400733590 /* audio18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F210527919AE8F0400733590 /* audio18.mp3 */; };
 		F210528D19AE8F0400733590 /* audio19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F210527A19AE8F0400733590 /* audio19.mp3 */; };
 		F210528E19AE8F0400733590 /* audio20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F210527B19AE8F0400733590 /* audio20.mp3 */; };
-		F210531A19AF139A00733590 /* 21_Econ_Kenya.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F21052FB19AF139A00733590 /* 21_Econ_Kenya.jpg */; };
-		F210531B19AF139A00733590 /* 20_Econ_Philippines.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F21052FC19AF139A00733590 /* 20_Econ_Philippines.jpg */; };
-		F210531C19AF139A00733590 /* 19_Econ_Ghana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F21052FD19AF139A00733590 /* 19_Econ_Ghana.jpg */; };
-		F210531D19AF139A00733590 /* 18_Econ_India.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F21052FE19AF139A00733590 /* 18_Econ_India.jpg */; };
-		F210531E19AF139A00733590 /* 17_Econ_Honduras.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F21052FF19AF139A00733590 /* 17_Econ_Honduras.jpg */; };
-		F210531F19AF139A00733590 /* 16_Econ_Ghana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530019AF139A00733590 /* 16_Econ_Ghana.jpg */; };
-		F210532019AF139A00733590 /* 15_Econ_Ghana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530119AF139A00733590 /* 15_Econ_Ghana.jpg */; };
-		F210532119AF139A00733590 /* 14_StPaulsChapel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530219AF139A00733590 /* 14_StPaulsChapel.jpg */; };
-		F210532219AF139A00733590 /* 13_Alabama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530319AF139A00733590 /* 13_Alabama.jpg */; };
-		F210532319AF139A00733590 /* 12_Katrina.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F210530419AF139A00733590 /* 12_Katrina.JPG */; };
-		F210532419AF139A00733590 /* 11_Sandy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530519AF139A00733590 /* 11_Sandy.jpg */; };
-		F210532519AF139A00733590 /* 10_Haiti.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530619AF139A00733590 /* 10_Haiti.jpg */; };
-		F210532619AF139A00733590 /* 09g_faces.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530719AF139A00733590 /* 09g_faces.jpg */; };
-		F210532719AF139A00733590 /* 09f_faces.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530819AF139A00733590 /* 09f_faces.jpg */; };
-		F210532819AF139A00733590 /* 09e_faces.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F210530919AF139A00733590 /* 09e_faces.JPG */; };
-		F210532919AF139A00733590 /* 09d_faces.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530A19AF139A00733590 /* 09d_faces.jpg */; };
-		F210532A19AF139A00733590 /* 09b_faces.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530B19AF139A00733590 /* 09b_faces.jpg */; };
-		F210532B19AF139A00733590 /* 09a_faces.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530C19AF139A00733590 /* 09a_faces.jpg */; };
-		F210532C19AF139A00733590 /* 08_zambiaexpedition.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530D19AF139A00733590 /* 08_zambiaexpedition.jpg */; };
-		F210532D19AF139A00733590 /* 07e_MalariaDistribution.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530E19AF139A00733590 /* 07e_MalariaDistribution.jpg */; };
-		F210532E19AF139A00733590 /* 07d_MalariaDistribution.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210530F19AF139A00733590 /* 07d_MalariaDistribution.jpg */; };
-		F210532F19AF139A00733590 /* 07c_MalariaDistribution.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210531019AF139A00733590 /* 07c_MalariaDistribution.jpg */; };
-		F210533019AF139A00733590 /* 07b_MalariaDistribution.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210531119AF139A00733590 /* 07b_MalariaDistribution.jpg */; };
-		F210533119AF139A00733590 /* 07a_MalariaDistribution.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210531219AF139A00733590 /* 07a_MalariaDistribution.jpg */; };
-		F210533219AF139A00733590 /* 06_SierraLeone_Malaria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210531319AF139A00733590 /* 06_SierraLeone_Malaria.jpg */; };
-		F210533319AF139A00733590 /* 05_Ghana_interior.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210531419AF139A00733590 /* 05_Ghana_interior.jpg */; };
-		F210533419AF139A00733590 /* 04_Family_Net .jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210531519AF139A00733590 /* 04_Family_Net .jpg */; };
-		F210533519AF139A00733590 /* 03b_ElSalvador_water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210531619AF139A00733590 /* 03b_ElSalvador_water.jpg */; };
-		F210533619AF139A00733590 /* 03a_ElSalvador_clinic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210531719AF139A00733590 /* 03a_ElSalvador_clinic.jpg */; };
-		F210533719AF139A00733590 /* 02_Dubose_midwife.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210531819AF139A00733590 /* 02_Dubose_midwife.jpg */; };
-		F210533819AF139A00733590 /* 01_Opening_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210531919AF139A00733590 /* 01_Opening_photo.jpg */; };
 		F243A98E19AE69B200EB8CBB /* iconVideoFacebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */; };
 		F243A98F19AE69B200EB8CBB /* iconVideoTwitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */; };
 		F2B92DCC19AD719600A49BA1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B92DCA19AD719600A49BA1 /* DetailViewController.m */; };
 		F2B92DCF19AD769A00A49BA1 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B92DCE19AD769A00A49BA1 /* placeholder@2x.png */; };
 		F2B92DD119AD780A00A49BA1 /* google@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B92DD019AD780A00A49BA1 /* google@2x.png */; };
-		F2B92DD519AD7E4200A49BA1 /* image1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2B92DD419AD7E4200A49BA1 /* image1@2x.jpg */; };
 		F2C023A119AD89820019663B /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C023A019AD89820019663B /* CustomSegue.m */; };
 /* End PBXBuildFile section */
 
@@ -134,44 +102,12 @@
 		F210527919AE8F0400733590 /* audio18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio18.mp3; sourceTree = "<group>"; };
 		F210527A19AE8F0400733590 /* audio19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio19.mp3; sourceTree = "<group>"; };
 		F210527B19AE8F0400733590 /* audio20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio20.mp3; sourceTree = "<group>"; };
-		F21052FB19AF139A00733590 /* 21_Econ_Kenya.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 21_Econ_Kenya.jpg; sourceTree = "<group>"; };
-		F21052FC19AF139A00733590 /* 20_Econ_Philippines.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20_Econ_Philippines.jpg; sourceTree = "<group>"; };
-		F21052FD19AF139A00733590 /* 19_Econ_Ghana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19_Econ_Ghana.jpg; sourceTree = "<group>"; };
-		F21052FE19AF139A00733590 /* 18_Econ_India.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18_Econ_India.jpg; sourceTree = "<group>"; };
-		F21052FF19AF139A00733590 /* 17_Econ_Honduras.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17_Econ_Honduras.jpg; sourceTree = "<group>"; };
-		F210530019AF139A00733590 /* 16_Econ_Ghana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16_Econ_Ghana.jpg; sourceTree = "<group>"; };
-		F210530119AF139A00733590 /* 15_Econ_Ghana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15_Econ_Ghana.jpg; sourceTree = "<group>"; };
-		F210530219AF139A00733590 /* 14_StPaulsChapel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14_StPaulsChapel.jpg; sourceTree = "<group>"; };
-		F210530319AF139A00733590 /* 13_Alabama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13_Alabama.jpg; sourceTree = "<group>"; };
-		F210530419AF139A00733590 /* 12_Katrina.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12_Katrina.JPG; sourceTree = "<group>"; };
-		F210530519AF139A00733590 /* 11_Sandy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11_Sandy.jpg; sourceTree = "<group>"; };
-		F210530619AF139A00733590 /* 10_Haiti.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10_Haiti.jpg; sourceTree = "<group>"; };
-		F210530719AF139A00733590 /* 09g_faces.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09g_faces.jpg; sourceTree = "<group>"; };
-		F210530819AF139A00733590 /* 09f_faces.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09f_faces.jpg; sourceTree = "<group>"; };
-		F210530919AF139A00733590 /* 09e_faces.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09e_faces.JPG; sourceTree = "<group>"; };
-		F210530A19AF139A00733590 /* 09d_faces.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09d_faces.jpg; sourceTree = "<group>"; };
-		F210530B19AF139A00733590 /* 09b_faces.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09b_faces.jpg; sourceTree = "<group>"; };
-		F210530C19AF139A00733590 /* 09a_faces.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09a_faces.jpg; sourceTree = "<group>"; };
-		F210530D19AF139A00733590 /* 08_zambiaexpedition.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08_zambiaexpedition.jpg; sourceTree = "<group>"; };
-		F210530E19AF139A00733590 /* 07e_MalariaDistribution.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07e_MalariaDistribution.jpg; sourceTree = "<group>"; };
-		F210530F19AF139A00733590 /* 07d_MalariaDistribution.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07d_MalariaDistribution.jpg; sourceTree = "<group>"; };
-		F210531019AF139A00733590 /* 07c_MalariaDistribution.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07c_MalariaDistribution.jpg; sourceTree = "<group>"; };
-		F210531119AF139A00733590 /* 07b_MalariaDistribution.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07b_MalariaDistribution.jpg; sourceTree = "<group>"; };
-		F210531219AF139A00733590 /* 07a_MalariaDistribution.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07a_MalariaDistribution.jpg; sourceTree = "<group>"; };
-		F210531319AF139A00733590 /* 06_SierraLeone_Malaria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06_SierraLeone_Malaria.jpg; sourceTree = "<group>"; };
-		F210531419AF139A00733590 /* 05_Ghana_interior.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05_Ghana_interior.jpg; sourceTree = "<group>"; };
-		F210531519AF139A00733590 /* 04_Family_Net .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04_Family_Net .jpg"; sourceTree = "<group>"; };
-		F210531619AF139A00733590 /* 03b_ElSalvador_water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03b_ElSalvador_water.jpg; sourceTree = "<group>"; };
-		F210531719AF139A00733590 /* 03a_ElSalvador_clinic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03a_ElSalvador_clinic.jpg; sourceTree = "<group>"; };
-		F210531819AF139A00733590 /* 02_Dubose_midwife.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02_Dubose_midwife.jpg; sourceTree = "<group>"; };
-		F210531919AF139A00733590 /* 01_Opening_photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01_Opening_photo.jpg; sourceTree = "<group>"; };
 		F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVideoFacebook@2x.png"; sourceTree = "<group>"; };
 		F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVideoTwitter@2x.png"; sourceTree = "<group>"; };
 		F2B92DC919AD719600A49BA1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F2B92DCA19AD719600A49BA1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F2B92DCE19AD769A00A49BA1 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 		F2B92DD019AD780A00A49BA1 /* google@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google@2x.png"; sourceTree = "<group>"; };
-		F2B92DD419AD7E4200A49BA1 /* image1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image1@2x.jpg"; sourceTree = "<group>"; };
 		F2C0239F19AD89820019663B /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
 		F2C023A019AD89820019663B /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -315,38 +251,6 @@
 		F210529019AE8F1800733590 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				F21052FB19AF139A00733590 /* 21_Econ_Kenya.jpg */,
-				F21052FC19AF139A00733590 /* 20_Econ_Philippines.jpg */,
-				F21052FD19AF139A00733590 /* 19_Econ_Ghana.jpg */,
-				F21052FE19AF139A00733590 /* 18_Econ_India.jpg */,
-				F21052FF19AF139A00733590 /* 17_Econ_Honduras.jpg */,
-				F210530019AF139A00733590 /* 16_Econ_Ghana.jpg */,
-				F210530119AF139A00733590 /* 15_Econ_Ghana.jpg */,
-				F210530219AF139A00733590 /* 14_StPaulsChapel.jpg */,
-				F210530319AF139A00733590 /* 13_Alabama.jpg */,
-				F210530419AF139A00733590 /* 12_Katrina.JPG */,
-				F210530519AF139A00733590 /* 11_Sandy.jpg */,
-				F210530619AF139A00733590 /* 10_Haiti.jpg */,
-				F210530719AF139A00733590 /* 09g_faces.jpg */,
-				F210530819AF139A00733590 /* 09f_faces.jpg */,
-				F210530919AF139A00733590 /* 09e_faces.JPG */,
-				F210530A19AF139A00733590 /* 09d_faces.jpg */,
-				F210530B19AF139A00733590 /* 09b_faces.jpg */,
-				F210530C19AF139A00733590 /* 09a_faces.jpg */,
-				F210530D19AF139A00733590 /* 08_zambiaexpedition.jpg */,
-				F210530E19AF139A00733590 /* 07e_MalariaDistribution.jpg */,
-				F210530F19AF139A00733590 /* 07d_MalariaDistribution.jpg */,
-				F210531019AF139A00733590 /* 07c_MalariaDistribution.jpg */,
-				F210531119AF139A00733590 /* 07b_MalariaDistribution.jpg */,
-				F210531219AF139A00733590 /* 07a_MalariaDistribution.jpg */,
-				F210531319AF139A00733590 /* 06_SierraLeone_Malaria.jpg */,
-				F210531419AF139A00733590 /* 05_Ghana_interior.jpg */,
-				F210531519AF139A00733590 /* 04_Family_Net .jpg */,
-				F210531619AF139A00733590 /* 03b_ElSalvador_water.jpg */,
-				F210531719AF139A00733590 /* 03a_ElSalvador_clinic.jpg */,
-				F210531819AF139A00733590 /* 02_Dubose_midwife.jpg */,
-				F210531919AF139A00733590 /* 01_Opening_photo.jpg */,
-				F2B92DD419AD7E4200A49BA1 /* image1@2x.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -436,56 +340,24 @@
 				F210528219AE8F0400733590 /* audio8.mp3 in Resources */,
 				F210528919AE8F0400733590 /* audio15.mp3 in Resources */,
 				F210528119AE8F0400733590 /* audio7.mp3 in Resources */,
-				F210533419AF139A00733590 /* 04_Family_Net .jpg in Resources */,
-				F210531A19AF139A00733590 /* 21_Econ_Kenya.jpg in Resources */,
-				F210532F19AF139A00733590 /* 07c_MalariaDistribution.jpg in Resources */,
-				F210532C19AF139A00733590 /* 08_zambiaexpedition.jpg in Resources */,
-				F210532719AF139A00733590 /* 09f_faces.jpg in Resources */,
-				F210532019AF139A00733590 /* 15_Econ_Ghana.jpg in Resources */,
 				F210528819AE8F0400733590 /* audio14.mp3 in Resources */,
 				F210528419AE8F0400733590 /* audio10.mp3 in Resources */,
-				F210532619AF139A00733590 /* 09g_faces.jpg in Resources */,
-				F210531C19AF139A00733590 /* 19_Econ_Ghana.jpg in Resources */,
 				F210527E19AE8F0400733590 /* audio4.mp3 in Resources */,
-				F210532219AF139A00733590 /* 13_Alabama.jpg in Resources */,
 				F210528619AE8F0400733590 /* audio12.mp3 in Resources */,
-				F210532E19AF139A00733590 /* 07d_MalariaDistribution.jpg in Resources */,
-				F210533619AF139A00733590 /* 03a_ElSalvador_clinic.jpg in Resources */,
 				F210528E19AE8F0400733590 /* audio20.mp3 in Resources */,
-				F210533019AF139A00733590 /* 07b_MalariaDistribution.jpg in Resources */,
-				F210533319AF139A00733590 /* 05_Ghana_interior.jpg in Resources */,
 				F210527C19AE8F0400733590 /* audio2.mp3 in Resources */,
-				F210532319AF139A00733590 /* 12_Katrina.JPG in Resources */,
 				F210528A19AE8F0400733590 /* audio16.mp3 in Resources */,
 				F210527D19AE8F0400733590 /* audio3.mp3 in Resources */,
-				F210533519AF139A00733590 /* 03b_ElSalvador_water.jpg in Resources */,
-				F210532519AF139A00733590 /* 10_Haiti.jpg in Resources */,
-				F210531E19AF139A00733590 /* 17_Econ_Honduras.jpg in Resources */,
-				F2B92DD519AD7E4200A49BA1 /* image1@2x.jpg in Resources */,
 				F210528719AE8F0400733590 /* audio13.mp3 in Resources */,
-				F210532819AF139A00733590 /* 09e_faces.JPG in Resources */,
-				F210531D19AF139A00733590 /* 18_Econ_India.jpg in Resources */,
-				F210532119AF139A00733590 /* 14_StPaulsChapel.jpg in Resources */,
-				F210532D19AF139A00733590 /* 07e_MalariaDistribution.jpg in Resources */,
-				F210533819AF139A00733590 /* 01_Opening_photo.jpg in Resources */,
-				F210532A19AF139A00733590 /* 09b_faces.jpg in Resources */,
 				F210526819AE7C3500733590 /* audio1.mp3 in Resources */,
-				F210533219AF139A00733590 /* 06_SierraLeone_Malaria.jpg in Resources */,
 				F210527F19AE8F0400733590 /* audio5.mp3 in Resources */,
-				F210532419AF139A00733590 /* 11_Sandy.jpg in Resources */,
 				F210528019AE8F0400733590 /* audio6.mp3 in Resources */,
 				5A77CA9419AD5730007B3C77 /* InfoPlist.strings in Resources */,
 				F2B92DD119AD780A00A49BA1 /* google@2x.png in Resources */,
 				F210528319AE8F0400733590 /* audio9.mp3 in Resources */,
-				F210532919AF139A00733590 /* 09d_faces.jpg in Resources */,
 				F210528519AE8F0400733590 /* audio11.mp3 in Resources */,
-				F210533719AF139A00733590 /* 02_Dubose_midwife.jpg in Resources */,
-				F210532B19AF139A00733590 /* 09a_faces.jpg in Resources */,
 				F210528B19AE8F0400733590 /* audio17.mp3 in Resources */,
-				F210533119AF139A00733590 /* 07a_MalariaDistribution.jpg in Resources */,
-				F210531B19AF139A00733590 /* 20_Econ_Philippines.jpg in Resources */,
 				F210528D19AE8F0400733590 /* audio19.mp3 in Resources */,
-				F210531F19AF139A00733590 /* 16_Econ_Ghana.jpg in Resources */,
 				F210528C19AE8F0400733590 /* audio18.mp3 in Resources */,
 				F243A98E19AE69B200EB8CBB /* iconVideoFacebook@2x.png in Resources */,
 				5A77CA9D19AD5730007B3C77 /* Main.storyboard in Resources */,
