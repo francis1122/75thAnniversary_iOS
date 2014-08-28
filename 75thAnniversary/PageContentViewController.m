@@ -9,7 +9,8 @@
 #import "PageContentViewController.h"
 
 @interface PageContentViewController (){
-    
+    int pageCount;
+    NSTimer *timer;
 }
 
 @end
@@ -20,44 +21,47 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
         // Custom initialization
     }
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
-        ([UIScreen mainScreen].scale == 2.0)){
-        // Retina display
-        self.imageFile = [self.imageFile stringByAppendingString:@"@2x"];
-    } else {}
-    
-    NSString* imagePath = [ [ NSBundle mainBundle] pathForResource:self.imageFile ofType:@"jpg"];
-    
-    UIImage *image = [ UIImage imageWithContentsOfFile: imagePath];
+- (id)initWithCoder:(NSCoder *)coder{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.imageFiles = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
 
-    self.backgroundImageView.image = image;
-    self.titleLabel.text = self.titleText;
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    pageCount = 0;
+    self.backgroundImageView.image = [self getImageForIndex:pageCount];
     
     NSString *audioPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"audio%d", (int)self.pageIndex+1] ofType:@"mp3"];
     NSError *error;
+    _backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:audioPath] error:&error];
 
-    _backgroundMusicPlayer = [[AVAudioPlayer alloc]
-                              initWithContentsOfURL:[NSURL URLWithString:audioPath] error:&error];
+}
 
+-(void)viewWillAppear:(BOOL)animated{
+    pageCount = 0;
+    self.backgroundImageView.image = [self getImageForIndex:pageCount];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(startAnimation) userInfo:nil repeats:YES];
     //[_backgroundMusicPlayer play];
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     [_backgroundMusicPlayer stop];
+    [timer invalidate];
+    timer = nil;
 }
 
 
@@ -65,6 +69,40 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)startAnimation{
+    if (self.imageFiles.count == 1) return;
+
+    CABasicAnimation *crossFade = [CABasicAnimation animationWithKeyPath:@"contents"];
+    crossFade.duration = 2.0;
+    if (pageCount == self.imageFiles.count-1) {
+        crossFade.fromValue = [self getImageForIndex:pageCount];
+        crossFade.toValue = [self getImageForIndex:0];
+        pageCount = 0;
+    }else{
+        crossFade.fromValue = [self getImageForIndex:pageCount++];
+        crossFade.toValue = [self getImageForIndex:pageCount];
+    }
+    [self.backgroundImageView.layer addAnimation:crossFade forKey:@"animateContents"];
+    self.backgroundImageView.image = [self getImageForIndex:pageCount];
+}
+
+-(NSString*)getAppropriatePathForString:(NSString*)imageString{
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
+        ([UIScreen mainScreen].scale == 2.0)){
+        // Retina display
+        imageString = [imageString stringByAppendingString:@"@2x"];
+    }
+    imageString = [ [ NSBundle mainBundle] pathForResource:imageString ofType:@"jpg"];
+    return imageString;
+}
+
+-(UIImage*)getImageForIndex:(int)i{
+    NSString *imageString = [self.imageFiles objectAtIndex:i];
+    NSString* imagePath = [self getAppropriatePathForString:imageString];
+    UIImage *image = [ UIImage imageWithContentsOfFile: imagePath];
+    return image;
 }
 
 @end

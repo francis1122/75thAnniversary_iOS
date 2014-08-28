@@ -29,7 +29,7 @@
     [super viewDidLoad];
     
     [self.toolbar setAlpha:0.0];
-    _pageImages = @[@"full1", @"full2", @"full3a", @"full4", @"full5", @"full6", @"full7a", @"full8", @"full9a", @"full10", @"full11", @"full12", @"full13", @"full14",@"full15",@"full16",@"full17",@"full18",@"full19",@"full20",@"full21"];
+    _pageImages = @[@[@"full1"], @[@"full2"], @[@"full3a", @"full3b"], @[@"full4"], @[@"full5"], @[@"full6"], @[@"full7a", @"full7b", @"full7c", @"full7d", @"full7e"], @[@"full8"], @[@"full9a", @"full9b", @"full9d", @"full9e", @"full9f"], @[@"full10"], @[@"full11"], @[@"full12"], @[@"full13"], @[@"full14"],@[@"full15"],@[@"full16"],@[@"full17"],@[@"full18"],@[@"full19"],@[@"full20"],@[@"full21"]];
     
     // Create page view controller
     //self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
@@ -116,7 +116,7 @@
     
     // Create a new view controller and pass suitable data.
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
-    pageContentViewController.imageFile = self.pageImages[index];
+    [pageContentViewController.imageFiles addObjectsFromArray:self.pageImages[index]];
     pageContentViewController.pageIndex = index;
     
     //contentViewController = pageContentViewController;
