@@ -12,5 +12,8 @@
 
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollview;
 
+-(IBAction)donateButtonTouched:(id)sender;
+-(IBAction)shareButtonTouched:(id)sender;
+
 
 @end

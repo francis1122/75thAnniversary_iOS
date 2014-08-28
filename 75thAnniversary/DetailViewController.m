@@ -214,7 +214,7 @@
                     break;
             }};
         
-        [fbController addImage:[UIImage imageNamed:@"1.jpg"]];
+        [fbController addImage:[UIImage imageNamed:@"image1.jpg"]];
         [fbController setInitialText:@"Check out this article."];
         [fbController addURL:[NSURL URLWithString:@"http://soulwithmobiletechnology.blogspot.com/"]];
         [fbController setCompletionHandler:completionHandler];
@@ -226,9 +226,9 @@
     SLComposeViewController *twitterController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
     
     
-    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
-        SLComposeViewControllerCompletionHandler __block completionHandler=^(SLComposeViewControllerResult result){
+        SLComposeViewControllerCompletionHandler __block completionHandler = ^(SLComposeViewControllerResult result){
             
             [twitterController dismissViewControllerAnimated:YES completion:nil];
             
@@ -248,6 +248,8 @@
             }};
         
         [twitterController setInitialText:@"Check out this article."];
+        [twitterController addImage:[UIImage imageNamed:@"image1.jpg"]];
+        
         [twitterController setCompletionHandler:completionHandler];
         [self presentViewController:twitterController animated:YES completion:nil];
     }

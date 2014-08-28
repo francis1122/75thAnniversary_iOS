@@ -60,4 +60,12 @@
     }
 }
 
+-(IBAction)donateButtonTouched:(id)sender{
+    NSLog(@"donate now button pressed");
+}
+
+-(IBAction)shareButtonTouched:(id)sender{
+    NSLog(@"share button pressed");
+}
+
 @end

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
+<<<<<<< HEAD
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+=======
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+>>>>>>> f02e3a9fb575e22afc926dba01705cf5b724edfa
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -36,10 +40,10 @@
                                                 <state key="normal" title="share">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="shareButtonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ITW-Zp-mR0"/>
-                                                </connections>
                                             </button>
+                                            <connections>
+                                                <action selector="shareButtonTouched:" destination="vXZ-lx-hvc" id="nOn-6P-g60"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="Qpg-RB-2wQ" userLabel="Donate Now">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Iyq-Ov-aae">
@@ -49,10 +53,10 @@
                                                 <state key="normal" title="donate NOW">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="donateButtonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hNP-sL-frS"/>
-                                                </connections>
                                             </button>
+                                            <connections>
+                                                <action selector="donateButtonTouched:" destination="vXZ-lx-hvc" id="d51-gD-T5X"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
