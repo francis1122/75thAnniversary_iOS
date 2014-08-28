@@ -13,7 +13,12 @@
 
 @interface DetailViewController (){
     PageContentViewController *contentViewController;
+
 }
+
+-(void) FBShare;
+-(void) TwitterShare;
+
 @end
 
 @implementation DetailViewController
@@ -121,8 +126,6 @@
     
     //contentViewController = pageContentViewController;
     
-
-    
     return pageContentViewController;
 }
 
@@ -192,7 +195,37 @@
     
 }
 
--(IBAction)facebookButtonTouched:(id)sender{
+-(IBAction)shareButtonTouched:(id)sender{
+    UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"Select Sharing Option:" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
+                            @"Share on Facebook",
+                            @"Share on Twitter",
+                            nil];
+    popup.tag = 1;
+    [popup showInView:[UIApplication sharedApplication].keyWindow];
+}
+
+- (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    switch (popup.tag) {
+        case 1: {
+            switch (buttonIndex) {
+                case 0:
+                    [self FBShare];
+                    break;
+                case 1:
+                    [self TwitterShare];
+                    break;
+                default:
+                    break;
+            }
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+-(IBAction)FBShare{
     SLComposeViewController *fbController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     
     
@@ -217,15 +250,17 @@
                     break;
             }};
         
-        [fbController addImage:[UIImage imageNamed:@"image1.jpg"]];
-        [fbController setInitialText:@"Check out this article."];
-        [fbController addURL:[NSURL URLWithString:@"http://soulwithmobiletechnology.blogspot.com/"]];
+        NSInteger currentIndex = contentViewController.pageIndex;
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",(NSString*)[self.pageImages objectAtIndex:currentIndex]]];
+        [fbController addImage:image];
+        [fbController setInitialText:@"Enjoying the 75th Anniversary Celebration Photo Exhibition. #allhands75"];
+        [fbController addURL:[NSURL URLWithString:@"https://www.facebook.com/EpiscopalRelief"]];
         [fbController setCompletionHandler:completionHandler];
         [self presentViewController:fbController animated:YES completion:nil];
     }
 }
 
--(IBAction)twitterButtonTouched:(id)sender{
+-(IBAction)TwitterShare{
     SLComposeViewController *twitterController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
     
     
@@ -249,10 +284,11 @@
                 }
                     break;
             }};
-        
-        [twitterController setInitialText:@"Check out this article."];
-        [twitterController addImage:[UIImage imageNamed:@"image1.jpg"]];
-        
+        NSInteger currentIndex = contentViewController.pageIndex;
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",(NSString*)[self.pageImages objectAtIndex:currentIndex]]];
+        [twitterController addImage:image];
+        [twitterController setInitialText:@"Enjoying the @EpiscopalRelief 75th Anniversary Photo Exhibition. #allhands75"];
+
         [twitterController setCompletionHandler:completionHandler];
         [self presentViewController:twitterController animated:YES completion:nil];
     }

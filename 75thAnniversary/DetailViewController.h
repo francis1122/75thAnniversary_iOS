@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface DetailViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIGestureRecognizerDelegate>
+@interface DetailViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIGestureRecognizerDelegate, UIActionSheetDelegate >
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) NSArray *pageImages;
-@property (assign, nonatomic) int *index;
+@property (assign, nonatomic) int index;
 @property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *playPauseButton;
@@ -22,9 +22,7 @@
 
 -(IBAction)backButtonTouched:(id)sender;
 -(IBAction)playPauseButtonTouched:(id)sender;
--(IBAction)facebookButtonTouched:(id)sender;
--(IBAction)twitterButtonTouched:(id)sender;
-
+-(IBAction)shareButtonTouched:(id)sender;
 -(id)initWithImage:(UIImage*)image;
 
 @end

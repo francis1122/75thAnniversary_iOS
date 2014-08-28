@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -24,18 +24,10 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="75th Anniversary" id="tTn-oH-cC5">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="mNL-Dx-Eiq" userLabel="Share">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rqJ-pp-T8z">
-                                                <rect key="frame" x="16" y="5" width="126" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="share">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="shareButtonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ITW-Zp-mR0"/>
-                                                </connections>
-                                            </button>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="action" id="mNL-Dx-Eiq" userLabel="Share">
+                                            <connections>
+                                                <action selector="shareButtonTouched:" destination="vXZ-lx-hvc" id="Fwn-uw-yNj"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="Qpg-RB-2wQ" userLabel="Donate Now">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Iyq-Ov-aae">
@@ -62,6 +54,7 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
@@ -88,43 +81,35 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DAI-cN-qb6">
                                 <rect key="frame" x="0.0" y="288" width="568" height="44"/>
                                 <items>
+                                    <barButtonItem width="11" style="plain" systemItem="fixedSpace" id="UzJ-Rl-UWL"/>
                                     <barButtonItem systemItem="pause" id="mjV-4b-fzr">
                                         <connections>
                                             <action selector="backButtonTouched:" destination="idG-LH-VDK" id="rqz-ie-Tma"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="fixedSpace" id="BZL-pZ-0Jh"/>
-                                    <barButtonItem width="238" style="plain" systemItem="fixedSpace" id="UzJ-Rl-UWL"/>
                                     <barButtonItem systemItem="play" id="rXG-BN-8fr">
                                         <connections>
                                             <action selector="playPauseButtonTouched:" destination="idG-LH-VDK" id="UfJ-HP-Hwt"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="208" style="plain" systemItem="fixedSpace" id="DW8-TH-TA2"/>
-                                    <barButtonItem image="iconVideoTwitter.png" style="plain" id="gQF-v9-YSF">
+                                    <barButtonItem width="116" style="plain" systemItem="fixedSpace" id="DW8-TH-TA2"/>
+                                    <barButtonItem systemItem="action" id="uHU-UT-g6x">
                                         <connections>
-                                            <action selector="twitterButtonTouched:" destination="idG-LH-VDK" id="qn6-pj-D52"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="13" style="plain" systemItem="fixedSpace" id="MWJ-lL-Gqa"/>
-                                    <barButtonItem image="iconVideoFacebook.png" id="uHU-UT-g6x">
-                                        <connections>
-                                            <action selector="facebookButtonTouched:" destination="idG-LH-VDK" id="Gf3-zF-yNZ"/>
+                                            <action selector="shareButtonTouched:" destination="idG-LH-VDK" id="s1E-zR-WUa"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="Tsg-Y9-bKk"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="backButton" destination="mjV-4b-fzr" id="GRB-zu-Krn"/>
-                        <outlet property="facebookButton" destination="uHU-UT-g6x" id="Nwg-uO-RLC"/>
                         <outlet property="playPauseButton" destination="rXG-BN-8fr" id="Q03-wj-P1I"/>
                         <outlet property="toolbar" destination="DAI-cN-qb6" id="nvz-wa-yjg"/>
-                        <outlet property="twitterButton" destination="gQF-v9-YSF" id="Wwb-Dz-JkD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PG-f5-KgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -158,6 +143,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
@@ -169,16 +155,9 @@
             <point key="canvasLocation" x="693" y="1172"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="iconVideoFacebook.png" width="9" height="18"/>
-        <image name="iconVideoTwitter.png" width="17" height="13"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4">
-            <size key="portraitSize" width="320" height="568"/>
-            <size key="landscapeSize" width="568" height="320"/>
-        </simulatedScreenMetrics>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

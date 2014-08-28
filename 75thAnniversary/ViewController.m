@@ -8,10 +8,15 @@
 
 #import "ViewController.h"
 #import "DetailViewController.h"
+#import "Social/Social.h"
 
 #define IS_IPHONE5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
 @interface ViewController ()
+
+-(void) FBShare;
+
+-(void) TwitterShare;
 
 @end
 
@@ -77,7 +82,100 @@
 }
 
 -(IBAction)shareButtonTouched:(id)sender{
-    NSLog(@"share button pressed");
+    UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"Select Sharing Option:" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
+                            @"Share on Facebook",
+                            @"Share on Twitter",
+                            nil];
+    popup.tag = 1;
+    [popup showInView:self.view];
+    
+}
+
+- (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    switch (popup.tag) {
+        case 1: {
+            switch (buttonIndex) {
+                case 0:
+                    [self FBShare];
+                    break;
+                case 1:
+                    [self TwitterShare];
+                    break;
+                default:
+                    break;
+            }
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+-(void) FBShare{
+    SLComposeViewController *fbController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    
+    
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewControllerCompletionHandler __block completionHandler=^(SLComposeViewControllerResult result){
+            
+            [fbController dismissViewControllerAnimated:YES completion:nil];
+            
+            switch(result){
+                case SLComposeViewControllerResultCancelled:
+                default:
+                {
+                    NSLog(@"Cancelled.....");
+                    
+                }
+                    break;
+                case SLComposeViewControllerResultDone:
+                {
+                    NSLog(@"Posted....");
+                }
+                    break;
+            }};
+        
+        [fbController addImage:[UIImage imageNamed:@"full20.jpg"]];
+        [fbController setInitialText:@"Enjoying the 75th Anniversary Celebration Photo Exhibition. #allhands75"];
+        [fbController addURL:[NSURL URLWithString:@"https://www.facebook.com/EpiscopalRelief"]];
+        [fbController setCompletionHandler:completionHandler];
+        [self presentViewController:fbController animated:YES completion:nil];
+    }
+}
+
+-(void) TwitterShare{
+    SLComposeViewController *twitterController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    
+    
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewControllerCompletionHandler __block completionHandler = ^(SLComposeViewControllerResult result){
+            
+            [twitterController dismissViewControllerAnimated:YES completion:nil];
+            
+            switch(result){
+                case SLComposeViewControllerResultCancelled:
+                default:
+                {
+                    NSLog(@"Cancelled.....");
+                    
+                }
+                    break;
+                case SLComposeViewControllerResultDone:
+                {
+                    NSLog(@"Posted....");
+                }
+                    break;
+            }};
+        
+        [twitterController setInitialText:@"Enjoying the @EpiscopalRelief 75th Anniversary Photo Exhibition. #allhands75"];
+        [twitterController addImage:[UIImage imageNamed:@"full20.jpg"]];
+        
+        [twitterController setCompletionHandler:completionHandler];
+        [self presentViewController:twitterController animated:YES completion:nil];
+    }
 }
 
 -(UIImage *)imageWithImage:(UIImage *)image scaledToFillSize:(CGSize)size
