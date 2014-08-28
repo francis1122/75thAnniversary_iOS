@@ -41,6 +41,23 @@
 
     self.backgroundImageView.image = image;
     self.titleLabel.text = self.titleText;
+    
+    NSString *audioPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"audio%d", (int)self.pageIndex+1] ofType:@"mp3"];
+    NSError *error;
+
+    _backgroundMusicPlayer = [[AVAudioPlayer alloc]
+                              initWithContentsOfURL:[NSURL URLWithString:audioPath] error:&error];
+
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    //[_backgroundMusicPlayer play];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [_backgroundMusicPlayer stop];
 }
 
 

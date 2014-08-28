@@ -13,8 +13,6 @@
 
 @interface DetailViewController (){
     PageContentViewController *contentViewController;
-    AVAudioPlayer *currentPlayer;
-    
 }
 @end
 
@@ -31,18 +29,18 @@
     [super viewDidLoad];
     
     [self.toolbar setAlpha:0.0];
-    _pageImages = @[@"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1", @"image1",@"image1",@"image1",@"image1",@"image1",@"image1",@"image1"];
+    _pageImages = @[@"full1", @"full2", @"full3a", @"full4", @"full5", @"full6", @"full7a", @"full8", @"full9a", @"full10", @"full11", @"full12", @"full13", @"full14",@"full15",@"full16",@"full17",@"full18",@"full19",@"full20",@"full21"];
     
     // Create page view controller
     //self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.dataSource = self;
+    self.pageViewController.delegate = self;
     
     
     PageContentViewController *startingViewController = [self viewControllerAtIndex:self.index];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:^(BOOL finished) {
-        [currentPlayer stop];
     }];
     
     // Change the size of page view controller
@@ -114,30 +112,16 @@
         return nil;
     }
     
-    [currentPlayer pause];
-    [currentPlayer stop];
-    currentPlayer = nil;
-    
     // Create a new view controller and pass suitable data.
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     pageContentViewController.imageFile = self.pageImages[index];
     pageContentViewController.pageIndex = index;
     
-    contentViewController = pageContentViewController;
+    //contentViewController = pageContentViewController;
     
     UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     recognizer.delegate = contentViewController;
     [contentViewController.view addGestureRecognizer:recognizer];
-    
-    
-    NSString *audioPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"audio%d", (int)index+1] ofType:@"mp3"];
-    NSError *error;
-    AVAudioPlayer * _backgroundMusicPlayer;
-    _backgroundMusicPlayer = [[AVAudioPlayer alloc]
-                              initWithContentsOfURL:[NSURL URLWithString:audioPath] error:&error];
-    [_backgroundMusicPlayer play];
-    
-    currentPlayer = _backgroundMusicPlayer;
     
     return pageContentViewController;
 }
@@ -170,8 +154,15 @@
     if (index == [self.pageImages count]) {
         return nil;
     }
-    [contentViewController.backgroundMusicPlayer stop];
+
     return [self viewControllerAtIndex:index];
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers{
+    if (pendingViewControllers.count >0) {
+        PageContentViewController *PCVC = [pendingViewControllers objectAtIndex:0];
+        contentViewController = PCVC;
+    }
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
@@ -191,6 +182,7 @@
 -(IBAction)playPauseButtonTouched:(id)sender{
     if ([contentViewController.backgroundMusicPlayer isPlaying]) {
         [contentViewController.backgroundMusicPlayer pause];
+        //self.playPauseButton setS
     }else{
         [contentViewController.backgroundMusicPlayer play];
     }
