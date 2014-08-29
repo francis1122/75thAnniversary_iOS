@@ -76,6 +76,10 @@
 		F210537B19AFB5BD00733590 /* Donate Button.png in Resources */ = {isa = PBXBuildFile; fileRef = F210537A19AFB5BD00733590 /* Donate Button.png */; };
 		F243A98E19AE69B200EB8CBB /* iconVideoFacebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */; };
 		F243A98F19AE69B200EB8CBB /* iconVideoTwitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */; };
+		F2A74CB719B122D9008762B6 /* Donate Button_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A74CB519B122D9008762B6 /* Donate Button_Pressed.png */; };
+		F2A74CB819B122D9008762B6 /* Donate_Button_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A74CB619B122D9008762B6 /* Donate_Button_1.png */; };
+		F2A74CBB19B122E5008762B6 /* logo-75-celebrate_Top.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A74CB919B122E5008762B6 /* logo-75-celebrate_Top.png */; };
+		F2A74CBC19B122E5008762B6 /* logo-75-celebrate.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A74CBA19B122E5008762B6 /* logo-75-celebrate.png */; };
 		F2B92DCC19AD719600A49BA1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B92DCA19AD719600A49BA1 /* DetailViewController.m */; };
 		F2B92DCF19AD769A00A49BA1 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B92DCE19AD769A00A49BA1 /* placeholder@2x.png */; };
 		F2B92DD119AD780A00A49BA1 /* google@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B92DD019AD780A00A49BA1 /* google@2x.png */; };
@@ -168,6 +172,10 @@
 		F210537A19AFB5BD00733590 /* Donate Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Donate Button.png"; sourceTree = "<group>"; };
 		F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVideoFacebook@2x.png"; sourceTree = "<group>"; };
 		F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVideoTwitter@2x.png"; sourceTree = "<group>"; };
+		F2A74CB519B122D9008762B6 /* Donate Button_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Donate Button_Pressed.png"; sourceTree = "<group>"; };
+		F2A74CB619B122D9008762B6 /* Donate_Button_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Donate_Button_1.png; sourceTree = "<group>"; };
+		F2A74CB919B122E5008762B6 /* logo-75-celebrate_Top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-75-celebrate_Top.png"; sourceTree = "<group>"; };
+		F2A74CBA19B122E5008762B6 /* logo-75-celebrate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-75-celebrate.png"; sourceTree = "<group>"; };
 		F2B92DC919AD719600A49BA1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F2B92DCA19AD719600A49BA1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F2B92DCE19AD769A00A49BA1 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
@@ -316,6 +324,8 @@
 		F210529019AE8F1800733590 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F2A74CB919B122E5008762B6 /* logo-75-celebrate_Top.png */,
+				F2A74CBA19B122E5008762B6 /* logo-75-celebrate.png */,
 				F210533919AF141000733590 /* full1a@2x.jpg */,
 				F210533A19AF141000733590 /* full2a@2x.jpg */,
 				F210533B19AF141000733590 /* full3a@2x.jpg */,
@@ -354,6 +364,8 @@
 		F210537919AFB5AF00733590 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				F2A74CB519B122D9008762B6 /* Donate Button_Pressed.png */,
+				F2A74CB619B122D9008762B6 /* Donate_Button_1.png */,
 				F210537A19AFB5BD00733590 /* Donate Button.png */,
 			);
 			name = Buttons;
@@ -441,11 +453,14 @@
 			files = (
 				5A77CAA219AD5730007B3C77 /* Images.xcassets in Resources */,
 				F2B92DCF19AD769A00A49BA1 /* placeholder@2x.png in Resources */,
+				F2A74CB819B122D9008762B6 /* Donate_Button_1.png in Resources */,
 				F210536019AF141000733590 /* full7b@2x.jpg in Resources */,
 				F210537419AF141000733590 /* full19a@2x.jpg in Resources */,
+				F2A74CBC19B122E5008762B6 /* logo-75-celebrate.png in Resources */,
 				F210528219AE8F0400733590 /* audio8.mp3 in Resources */,
 				F210528919AE8F0400733590 /* audio15.mp3 in Resources */,
 				F210528119AE8F0400733590 /* audio7.mp3 in Resources */,
+				F2A74CBB19B122E5008762B6 /* logo-75-celebrate_Top.png in Resources */,
 				F210536319AF141000733590 /* full7e@2x.jpg in Resources */,
 				F210537619AF141000733590 /* full21a@2x.jpg in Resources */,
 				F210535819AF141000733590 /* full1a@2x.jpg in Resources */,
@@ -467,6 +482,7 @@
 				F210535F19AF141000733590 /* full7a@2x.jpg in Resources */,
 				F210527D19AE8F0400733590 /* audio3.mp3 in Resources */,
 				F210535A19AF141000733590 /* full3a@2x.jpg in Resources */,
+				F2A74CB719B122D9008762B6 /* Donate Button_Pressed.png in Resources */,
 				F210528719AE8F0400733590 /* audio13.mp3 in Resources */,
 				F210536E19AF141000733590 /* full13a@2x.jpg in Resources */,
 				F210526819AE7C3500733590 /* audio1.mp3 in Resources */,
