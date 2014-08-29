@@ -29,21 +29,29 @@
                                     <color key="textColor" red="0.93725490196078431" green="0.25490196078431371" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="75th Anniversary" id="tTn-oH-cC5">
+                                    <navigationItem id="tTn-oH-cC5">
+                                        <nil key="title"/>
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="action" id="mNL-Dx-Eiq" userLabel="Share">
                                             <connections>
                                                 <action selector="shareButtonTouched:" destination="vXZ-lx-hvc" id="Fwn-uw-yNj"/>
                                             </connections>
                                         </barButtonItem>
+                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="Xqy-hn-BaS">
+                                            <rect key="frame" x="179" y="6" width="210" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="logo-75-celebrate.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="Qpg-RB-2wQ" userLabel="Donate Now">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Iyq-Ov-aae">
-                                                <rect key="frame" x="426" y="5" width="126" height="33"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Iyq-Ov-aae">
+                                                <rect key="frame" x="432" y="9" width="120" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="Donate Now">
-                                                    <color key="titleColor" red="0.96862745098039216" green="0.5725490196078431" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="Donate_Button_1.png">
+                                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <state key="highlighted" image="Donate Button_Pressed.png"/>
                                                 <connections>
                                                     <action selector="donateButtonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hNP-sL-frS"/>
                                                 </connections>
@@ -64,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="151"/>
+            <point key="canvasLocation" x="-45" y="157"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="tyF-3p-9bb">
@@ -164,6 +172,11 @@
             <point key="canvasLocation" x="693" y="1172"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Donate Button_Pressed.png" width="136" height="30"/>
+        <image name="Donate_Button_1.png" width="136" height="30"/>
+        <image name="logo-75-celebrate.png" width="198" height="32"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
