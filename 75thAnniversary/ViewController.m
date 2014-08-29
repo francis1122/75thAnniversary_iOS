@@ -10,7 +10,7 @@
 #import "DetailViewController.h"
 #import "Social/Social.h"
 
-#define IS_IPHONE5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define IS_IPHONE_5 ( [ [ UIScreen mainScreen ] bounds ].size.width == 568 )
 
 @interface ViewController ()
 
@@ -21,6 +21,29 @@
 @end
 
 @implementation ViewController
+
+-(CGRect)currentScreenBoundsDependOnOrientation
+{
+    NSString *reqSysVer = @"8.0";
+    NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
+    if ([currSysVer compare:reqSysVer options:NSNumericSearch] != NSOrderedAscending)
+        return [UIScreen mainScreen].bounds;
+    
+    CGRect screenBounds = [UIScreen mainScreen].bounds ;
+    CGFloat width = CGRectGetWidth(screenBounds)  ;
+    CGFloat height = CGRectGetHeight(screenBounds) ;
+    UIInterfaceOrientation interfaceOrientation = [UIApplication sharedApplication].statusBarOrientation;
+    
+    if(UIInterfaceOrientationIsPortrait(interfaceOrientation)){
+        screenBounds.size = CGSizeMake(width, height);
+        NSLog(@"Portrait Height: %f", screenBounds.size.height);
+    }else if(UIInterfaceOrientationIsLandscape(interfaceOrientation)){
+        screenBounds.size = CGSizeMake(height, width);
+        NSLog(@"Landscape Height: %f", screenBounds.size.height);
+    }
+    
+    return screenBounds ;
+}
 
 - (void)viewDidLoad
 {
@@ -38,13 +61,13 @@
     float squareSize = 134;
     float xOffset = 6;
     int numOfColumns = 4;
-    if (!IS_IPHONE5) {
+    if ([self currentScreenBoundsDependOnOrientation].size.width != 568) {
         squareSize = 152;
         numOfColumns = 3;
     }
         for (int i = 0; i<21; ++i) {
             
-            UIImage *IMG = [UIImage imageNamed: [NSString stringWithFormat:@"full%i.jpg", (i+1)]];
+            UIImage *IMG = [UIImage imageNamed: [NSString stringWithFormat:@"full%ia.jpg", (i+1)]];
             UIImage *image = [self imageWithImage:IMG scaledToFillSize:CGSizeMake(squareSize, squareSize)];
             if (!image) continue;
             
