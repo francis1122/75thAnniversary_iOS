@@ -98,10 +98,18 @@
                                 <rect key="frame" x="0.0" y="288" width="568" height="44"/>
                                 <items>
                                     <barButtonItem width="11" style="plain" systemItem="fixedSpace" id="UzJ-Rl-UWL"/>
-                                    <barButtonItem systemItem="pause" id="mjV-4b-fzr">
-                                        <connections>
-                                            <action selector="backButtonTouched:" destination="idG-LH-VDK" id="rqz-ie-Tma"/>
-                                        </connections>
+                                    <barButtonItem style="plain" id="IIc-CY-Jkm">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gvg-co-w5j">
+                                            <rect key="frame" x="27" y="5" width="34" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="Grid_button_.png" backgroundImage="Grid_button_Pressed.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted" image="Grid_button_Pressed.png"/>
+                                            <connections>
+                                                <action selector="backButtonTouched:" destination="idG-LH-VDK" eventType="touchUpInside" id="gek-8H-hhb"/>
+                                            </connections>
+                                        </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fNM-Mt-gtf"/>
                                     <barButtonItem systemItem="play" id="rXG-BN-8fr">
@@ -110,10 +118,15 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="DW8-TH-TA2"/>
-                                    <barButtonItem systemItem="action" id="uHU-UT-g6x">
-                                        <connections>
-                                            <action selector="shareButtonTouched:" destination="idG-LH-VDK" id="s1E-zR-WUa"/>
-                                        </connections>
+                                    <barButtonItem style="plain" id="wYp-5A-TaT" userLabel="share">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5js-JF-DpT">
+                                            <rect key="frame" x="405" y="7" width="136" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="new_Donate_Button.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted" image="new_Donate_Button_Pressed.png"/>
+                                        </button>
                                     </barButtonItem>
                                     <barButtonItem width="11" style="plain" systemItem="fixedSpace" id="WX7-1A-xSj"/>
                                 </items>
@@ -128,7 +141,6 @@
                     <navigationItem key="navigationItem" id="Tsg-Y9-bKk"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="backButton" destination="mjV-4b-fzr" id="GRB-zu-Krn"/>
                         <outlet property="playPauseButton" destination="rXG-BN-8fr" id="Q03-wj-P1I"/>
                         <outlet property="toolbar" destination="DAI-cN-qb6" id="nvz-wa-yjg"/>
                     </connections>
@@ -181,6 +193,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Grid_button_.png" width="34" height="33"/>
+        <image name="Grid_button_Pressed.png" width="34" height="33"/>
         <image name="Share_Button.png" width="136" height="30"/>
         <image name="Share_Button_Pressed.png" width="136" height="30"/>
         <image name="new_75_celebrate.png" width="111" height="42"/>
