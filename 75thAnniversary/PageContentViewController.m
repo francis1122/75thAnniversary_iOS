@@ -49,12 +49,17 @@
 -(void)viewWillAppear:(BOOL)animated{
     pageCount = 0;
     self.backgroundImageView.image = [self getImageForIndex:pageCount];
+    
+
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(startAnimation) userInfo:nil repeats:YES];
-    //[_backgroundMusicPlayer play];
+    [_backgroundMusicPlayer play];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"AudioNotification"
+                                                        object:self];
 }
 
 -(void)viewDidDisappear:(BOOL)animated{

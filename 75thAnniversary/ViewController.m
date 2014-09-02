@@ -49,6 +49,9 @@
 {
     [super viewDidLoad];
     [self setupGrid];
+    
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,6 +90,7 @@
         }
     
 }
+
 
 -(void)thumbnailTouched:(id)sender{
     [self performSegueWithIdentifier:@"transition" sender:sender];

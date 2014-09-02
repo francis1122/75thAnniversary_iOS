@@ -9,14 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface DetailViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIGestureRecognizerDelegate, UIActionSheetDelegate >
+@interface DetailViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIGestureRecognizerDelegate, UIActionSheetDelegate, AVAudioPlayerDelegate >
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) NSArray *pageImages;
 @property (assign, nonatomic) int index;
 @property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *playPauseButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *facebookButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *twitterButton;
 

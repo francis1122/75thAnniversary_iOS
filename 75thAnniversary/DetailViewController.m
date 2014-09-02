@@ -15,9 +15,11 @@
     PageContentViewController *contentViewController;
 
 }
-
+-(void) replacePlayButton:(UIBarButtonItem*) newPlayButton;
 -(void) FBShare;
 -(void) TwitterShare;
+
+-(void)newPageContentDidAppear:(NSNotification*) notification;
 
 @end
 
@@ -60,6 +62,36 @@
     UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     recognizer.delegate = contentViewController;
     [contentViewController.view addGestureRecognizer:recognizer];
+    
+    contentViewController.backgroundMusicPlayer.delegate = self;
+    // check to see if audio is playing successfully
+    if([contentViewController.backgroundMusicPlayer isPlaying]){
+        
+        UIBarButtonItem *button = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(pausePlaying)];
+        [self replacePlayButton:button];
+        
+    }else{
+        
+        UIBarButtonItem *button = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(resumePlaying)];
+        [self replacePlayButton:button];
+        
+    }
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(newPageContentDidAppear:)
+                                                 name:@"AudioNotification"
+                                               object:nil];
+    
+    
+//    self.navigationItem.rightBarButtonItem = self.playPauseButton;
+}
+
+-(void) replacePlayButton:(UIBarButtonItem*) newPlayButton{
+    NSMutableArray *toolbarArray = [[NSMutableArray alloc] initWithArray: self.toolbar.items];
+    [toolbarArray removeObjectAtIndex:2];
+    [toolbarArray insertObject:newPlayButton atIndex:2];
+    [self.toolbar setItems:toolbarArray];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -124,6 +156,7 @@
     [pageContentViewController.imageFiles addObjectsFromArray:self.pageImages[index]];
     pageContentViewController.pageIndex = index;
     
+    
     //contentViewController = pageContentViewController;
     
     return pageContentViewController;
@@ -168,6 +201,10 @@
         UITapGestureRecognizer * recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
         recognizer.delegate = contentViewController;
         [contentViewController.view addGestureRecognizer:recognizer];
+        
+        //audio toolbar stuff
+        contentViewController.backgroundMusicPlayer.delegate = self;
+
     }
 }
 
@@ -192,7 +229,6 @@
     }else{
         [contentViewController.backgroundMusicPlayer play];
     }
-    
 }
 
 -(IBAction)shareButtonTouched:(id)sender{
@@ -295,6 +331,33 @@
 }
 
 
+#pragma mark - pause play button
+
+-(IBAction)pausePlaying
+{
+    
+    NSLog(@"push tap");
+    if([contentViewController.backgroundMusicPlayer isPlaying])
+    {
+        UIBarButtonItem *button = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(resumePlaying)];
+        [self replacePlayButton:button];
+        [contentViewController.backgroundMusicPlayer pause];
+    }
+}
+
+-(IBAction)resumePlaying
+{
+    if(![contentViewController.backgroundMusicPlayer isPlaying])
+    {
+        UIBarButtonItem *button = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(pausePlaying)];
+        [self replacePlayButton:button];
+        [contentViewController.backgroundMusicPlayer play];
+    }
+    
+    NSLog(@"resume tap");
+}
+
+
 /*
 #pragma mark - Navigation
 
@@ -304,5 +367,62 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)newPageContentDidAppear:(NSNotification*) notification{
+    contentViewController.backgroundMusicPlayer.delegate = self;
+    // check to see if audio is playing successfully
+    if([contentViewController.backgroundMusicPlayer isPlaying]){
+        
+        UIBarButtonItem *button = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(pausePlaying)];
+        [self replacePlayButton:button];
+        
+    }else{
+        
+        UIBarButtonItem *button = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(resumePlaying)];
+        [self replacePlayButton:button];
+        
+    }
+}
+
+#pragma mark - avDelegates
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+    if(contentViewController.backgroundMusicPlayer == player){
+        UIBarButtonItem *button = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(resumePlaying)];
+        [self replacePlayButton:button];
+    }
+
+    NSLog(@"did finish playing");
+    
+    
+    
+}
+
+/* if an error occurs while decoding it will be reported to the delegate. */
+- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error{
+    
+}
+
+
+/* audioPlayerBeginInterruption: is called when the audio session has been interrupted while the player was playing. The player will have been paused. */
+- (void)audioPlayerBeginInterruption:(AVAudioPlayer *)player{
+    
+}
+
+/* audioPlayerEndInterruption:withOptions: is called when the audio session interruption has ended and this player had been interrupted while playing. */
+/* Currently the only flag is AVAudioSessionInterruptionFlags_ShouldResume. */
+- (void)audioPlayerEndInterruption:(AVAudioPlayer *)player withOptions:(NSUInteger)flags NS_AVAILABLE_IOS(6_0){
+    
+}
+
+- (void)audioPlayerEndInterruption:(AVAudioPlayer *)player withFlags:(NSUInteger)flags NS_DEPRECATED_IOS(4_0, 6_0){
+    
+}
+
+/* audioPlayerEndInterruption: is called when the preferred method, audioPlayerEndInterruption:withFlags:, is not implemented. */
+- (void)audioPlayerEndInterruption:(AVAudioPlayer *)player NS_DEPRECATED_IOS(2_2, 6_0){
+    
+}
+
 
 @end
