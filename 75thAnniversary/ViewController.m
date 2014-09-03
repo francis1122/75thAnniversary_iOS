@@ -12,6 +12,8 @@
 
 #define IS_IPHONE_5 ( [ [ UIScreen mainScreen ] bounds ].size.width == 568 )
 
+#define NUM_OF_IMGS 21
+
 @interface ViewController ()
 
 -(void) FBShare;
@@ -61,14 +63,34 @@
 }
 
 -(void)setupGrid{
-    float squareSize = 134;
-    float xOffset = 6;
-    int numOfColumns = 4;
-    if ([self currentScreenBoundsDependOnOrientation].size.width != 568) {
-        squareSize = 152;
-        numOfColumns = 3;
-    }
-        for (int i = 0; i<21; ++i) {
+    float squareSize = 124;
+    float xMargin = 6;
+    float yMargin = 6;
+    
+    float imgPadding = 6;
+    
+    //int numOfColumns = 4;
+    
+    float screenWidth =  [self currentScreenBoundsDependOnOrientation].size.width;
+    
+
+    
+    int numOfColumns = ((screenWidth-(2.0*xMargin))/(squareSize+imgPadding));
+    float extraSpace = (screenWidth - (numOfColumns * (squareSize+imgPadding)))-imgPadding;
+    
+    float extraImageSpace = extraSpace - xMargin/2;
+    float increasedImageSpace = extraImageSpace/numOfColumns;
+    squareSize = squareSize + increasedImageSpace;
+    
+    //recalculate spacing of squares
+    extraSpace = (screenWidth - (numOfColumns * (squareSize+imgPadding)))-imgPadding;
+    
+    xMargin = extraSpace/2.0;
+    xMargin += (imgPadding);
+    yMargin = xMargin;
+    
+    
+        for (int i = 0; i<NUM_OF_IMGS; ++i) {
             
             UIImage *IMG = [UIImage imageNamed: [NSString stringWithFormat:@"full%ia.jpg", (i+1)]];
             UIImage *image = [self imageWithImage:IMG scaledToFillSize:CGSizeMake(squareSize, squareSize)];
@@ -84,22 +106,34 @@
             button.imageView.contentMode = UIViewContentModeRedraw;
             
             
-            [button setFrame:CGRectMake(xOffset+((squareSize+6)*(i%numOfColumns)), 6+((squareSize+6)*(floor(i/numOfColumns))), squareSize, squareSize)];
+            [button setFrame:CGRectMake(xMargin+((squareSize+imgPadding)*(i%numOfColumns)), yMargin+((squareSize+imgPadding)*(floor(i/numOfColumns))), squareSize, squareSize)];
             [self.scrollview addSubview:button];
-            [self.scrollview setContentSize:CGSizeMake(320, 6+(squareSize+6)*((floor(i/numOfColumns))+1))];
+
         }
     [self setupSpecialThumbnail];
     
 }
 
 -(void)setupSpecialThumbnail{
-    float squareSize = 134;
-    float xOffset = 6;
-    int numOfColumns = 4;
-    if ([self currentScreenBoundsDependOnOrientation].size.width != 568) {
-        squareSize = 152;
-        numOfColumns = 3;
-    }
+    float squareSize = 124;
+    float xMargin = 6;
+    float yMargin = 6;
+    float imgPadding = 6;
+    float screenWidth =  [self currentScreenBoundsDependOnOrientation].size.width;
+    int numOfColumns = ((screenWidth-(2.0*xMargin))/(squareSize+imgPadding));
+    float extraSpace = (screenWidth - (numOfColumns * (squareSize+imgPadding)))-imgPadding;
+    float extraImageSpace = extraSpace - xMargin/2;
+    float increasedImageSpace = extraImageSpace/numOfColumns;
+    squareSize = squareSize + increasedImageSpace;
+    
+    //recalculate spacing of squares
+    extraSpace = (screenWidth - (numOfColumns * (squareSize+imgPadding)))-imgPadding;
+
+    xMargin = extraSpace/2.0;
+    xMargin += (imgPadding);
+    yMargin = xMargin;
+    
+    
     UIImage *IMG = [UIImage imageNamed:@"full21a.jpg"];
     //UIImage *image = [self imageWithImage:IMG scaledToFillSize:CGSizeMake(squareSize, squareSize)];
     
@@ -111,9 +145,9 @@
     button.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     
-    [button setFrame:CGRectMake(xOffset+((squareSize+6)*(21%numOfColumns)), 6+((squareSize+6)*(floor(21/numOfColumns))), squareSize, squareSize)];
+    [button setFrame:CGRectMake(xMargin+((squareSize+imgPadding)*(NUM_OF_IMGS%numOfColumns)), yMargin+((squareSize+imgPadding)*(floor(NUM_OF_IMGS/numOfColumns))), squareSize, squareSize)];
     [self.scrollview addSubview:button];
-    [self.scrollview setContentSize:CGSizeMake(320, 6+(squareSize+6)*((floor(21/numOfColumns))+1))];
+    [self.scrollview setContentSize:CGSizeMake(xMargin+((squareSize+imgPadding)*(NUM_OF_IMGS%numOfColumns)), (yMargin*4)+(squareSize+imgPadding)*((ceil((((float)NUM_OF_IMGS+1.0)) /numOfColumns))))];
 }
 
 
