@@ -111,9 +111,9 @@
     button.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     
-    [button setFrame:CGRectMake(xOffset+((squareSize+6)*(22%numOfColumns)), 6+((squareSize+6)*(floor(22/numOfColumns))), squareSize, squareSize)];
+    [button setFrame:CGRectMake(xOffset+((squareSize+6)*(21%numOfColumns)), 6+((squareSize+6)*(floor(21/numOfColumns))), squareSize, squareSize)];
     [self.scrollview addSubview:button];
-    [self.scrollview setContentSize:CGSizeMake(320, 6+(squareSize+6)*((floor(22/numOfColumns))+1))];
+    [self.scrollview setContentSize:CGSizeMake(320, 6+(squareSize+6)*((floor(21/numOfColumns))+1))];
 }
 
 
