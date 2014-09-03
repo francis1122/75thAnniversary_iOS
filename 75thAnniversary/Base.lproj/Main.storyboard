@@ -53,7 +53,7 @@
                                             </state>
                                         </button>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="Qpg-RB-2wQ" userLabel="Donate Now">
-                                            <button key="customView" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Iyq-Ov-aae">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Iyq-Ov-aae">
                                                 <rect key="frame" x="441" y="9" width="111" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="new_Donate_Button.png">
