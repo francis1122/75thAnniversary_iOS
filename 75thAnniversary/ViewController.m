@@ -88,12 +88,43 @@
             [self.scrollview addSubview:button];
             [self.scrollview setContentSize:CGSizeMake(320, 6+(squareSize+6)*((floor(i/numOfColumns))+1))];
         }
+    [self setupSpecialThumbnail];
     
+}
+
+-(void)setupSpecialThumbnail{
+    float squareSize = 134;
+    float xOffset = 6;
+    int numOfColumns = 4;
+    if ([self currentScreenBoundsDependOnOrientation].size.width != 568) {
+        squareSize = 152;
+        numOfColumns = 3;
+    }
+    UIImage *IMG = [UIImage imageNamed:@"full21a.jpg"];
+    //UIImage *image = [self imageWithImage:IMG scaledToFillSize:CGSizeMake(squareSize, squareSize)];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor = [UIColor blackColor];
+    [button setImage:IMG forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(thumbnailTouched:) forControlEvents:UIControlEventTouchUpInside];
+    button.tag = -1;
+    button.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    
+    [button setFrame:CGRectMake(xOffset+((squareSize+6)*(21%numOfColumns)), 6+((squareSize+6)*(floor(21/numOfColumns))), squareSize, squareSize)];
+    [self.scrollview addSubview:button];
+    [self.scrollview setContentSize:CGSizeMake(320, 6+(squareSize+6)*((floor(21/numOfColumns))+1))];
 }
 
 
 -(void)thumbnailTouched:(id)sender{
-    [self performSegueWithIdentifier:@"transition" sender:sender];
+    if(((UIButton*)sender).tag == -1){
+        //take the user to safari
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.episcopalrelief.org"]];
+        //
+    }else{
+        [self performSegueWithIdentifier:@"transition" sender:sender];
+    }
     
 }
 
@@ -106,6 +137,7 @@
 
 -(IBAction)donateButtonTouched:(id)sender{
     NSLog(@"donate now button pressed");
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.episcopalrelief.org/what-you-can-do/donate-now/individual-donation/75th-fundraising-campaigns"]];
 }
 
 -(IBAction)shareButtonTouched:(id)sender{
