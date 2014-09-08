@@ -134,11 +134,11 @@
     yMargin = xMargin;
     
     
-    UIImage *IMG = [UIImage imageNamed:@"full21a.jpg"];
+    UIImage *IMG = [UIImage imageNamed:@"specialThumb"];
     //UIImage *image = [self imageWithImage:IMG scaledToFillSize:CGSizeMake(squareSize, squareSize)];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.backgroundColor = [UIColor blackColor];
+    button.backgroundColor = [UIColor whiteColor];
     [button setImage:IMG forState:UIControlStateNormal];
     [button addTarget:self action:@selector(thumbnailTouched:) forControlEvents:UIControlEventTouchUpInside];
     button.tag = -1;
@@ -287,5 +287,6 @@
     UIGraphicsEndImageContext();
     return newImage;
 }
+
 
 @end

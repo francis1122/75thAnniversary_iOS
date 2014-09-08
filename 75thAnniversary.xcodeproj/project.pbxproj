@@ -85,6 +85,13 @@
 		F210537519AF141000733590 /* full20a@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210535619AF141000733590 /* full20a@2x.jpg */; };
 		F210537619AF141000733590 /* full21a@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F210535719AF141000733590 /* full21a@2x.jpg */; };
 		F210537B19AFB5BD00733590 /* Donate Button.png in Resources */ = {isa = PBXBuildFile; fileRef = F210537A19AFB5BD00733590 /* Donate Button.png */; };
+		F228432519BE6D3C00D7C4BC /* iOS_app_icon_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = F228432019BE6D3C00D7C4BC /* iOS_app_icon_58x58.png */; };
+		F228432619BE6D3C00D7C4BC /* iOS_app_icon_80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = F228432119BE6D3C00D7C4BC /* iOS_app_icon_80x80.png */; };
+		F228432719BE6D3C00D7C4BC /* iOS_app_icon_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = F228432219BE6D3C00D7C4BC /* iOS_app_icon_120x120.png */; };
+		F228433319BE722900D7C4BC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F228433019BE722900D7C4BC /* Default.png */; };
+		F228433419BE722900D7C4BC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F228433119BE722900D7C4BC /* Default@2x.png */; };
+		F228433519BE722900D7C4BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F228433219BE722900D7C4BC /* Default-568h@2x.png */; };
+		F228433719BE733200D7C4BC /* specialThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = F228433619BE733200D7C4BC /* specialThumb.png */; };
 		F243A98E19AE69B200EB8CBB /* iconVideoFacebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */; };
 		F243A98F19AE69B200EB8CBB /* iconVideoTwitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */; };
 		F2AD343419B9046800E82482 /* audio21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F2AD343319B9046800E82482 /* audio21.mp3 */; };
@@ -96,6 +103,20 @@
 
 /* Begin PBXContainerItemProxy section */
 		5A77CAAC19AD5730007B3C77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A77CA7E19AD5730007B3C77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A77CA8519AD5730007B3C77;
+			remoteInfo = 75thAnniversary;
+		};
+		F228432A19BE6DC200D7C4BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A77CA7E19AD5730007B3C77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A77CA8519AD5730007B3C77;
+			remoteInfo = 75thAnniversary;
+		};
+		F228432C19BE6DC300D7C4BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5A77CA7E19AD5730007B3C77 /* Project object */;
 			proxyType = 1;
@@ -189,6 +210,13 @@
 		F210535619AF141000733590 /* full20a@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "full20a@2x.jpg"; sourceTree = "<group>"; };
 		F210535719AF141000733590 /* full21a@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "full21a@2x.jpg"; sourceTree = "<group>"; };
 		F210537A19AFB5BD00733590 /* Donate Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Donate Button.png"; sourceTree = "<group>"; };
+		F228432019BE6D3C00D7C4BC /* iOS_app_icon_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS_app_icon_58x58.png; sourceTree = "<group>"; };
+		F228432119BE6D3C00D7C4BC /* iOS_app_icon_80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS_app_icon_80x80.png; sourceTree = "<group>"; };
+		F228432219BE6D3C00D7C4BC /* iOS_app_icon_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS_app_icon_120x120.png; sourceTree = "<group>"; };
+		F228433019BE722900D7C4BC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F228433119BE722900D7C4BC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F228433219BE722900D7C4BC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F228433619BE733200D7C4BC /* specialThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = specialThumb.png; sourceTree = "<group>"; };
 		F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVideoFacebook@2x.png"; sourceTree = "<group>"; };
 		F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVideoTwitter@2x.png"; sourceTree = "<group>"; };
 		F2A74CB919B122E5008762B6 /* logo-75-celebrate_Top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-75-celebrate_Top.png"; sourceTree = "<group>"; };
@@ -267,10 +295,17 @@
 				5A77CA9E19AD5730007B3C77 /* ViewController.h */,
 				5A77CA9F19AD5730007B3C77 /* ViewController.m */,
 				5A77CAA119AD5730007B3C77 /* Images.xcassets */,
+				F228433019BE722900D7C4BC /* Default.png */,
+				F228433119BE722900D7C4BC /* Default@2x.png */,
+				F228433219BE722900D7C4BC /* Default-568h@2x.png */,
+				F228432019BE6D3C00D7C4BC /* iOS_app_icon_58x58.png */,
+				F228432119BE6D3C00D7C4BC /* iOS_app_icon_80x80.png */,
+				F228432219BE6D3C00D7C4BC /* iOS_app_icon_120x120.png */,
 				F243A98C19AE69B200EB8CBB /* iconVideoFacebook@2x.png */,
 				F243A98D19AE69B200EB8CBB /* iconVideoTwitter@2x.png */,
 				F2B92DD019AD780A00A49BA1 /* google@2x.png */,
 				F2B92DCE19AD769A00A49BA1 /* placeholder@2x.png */,
+				F228433619BE733200D7C4BC /* specialThumb.png */,
 				5A77CA9019AD5730007B3C77 /* Supporting Files */,
 				F2B92DC919AD719600A49BA1 /* DetailViewController.h */,
 				F2B92DCA19AD719600A49BA1 /* DetailViewController.m */,
@@ -429,6 +464,8 @@
 			);
 			dependencies = (
 				5A77CAAD19AD5730007B3C77 /* PBXTargetDependency */,
+				F228432B19BE6DC200D7C4BC /* PBXTargetDependency */,
+				F228432D19BE6DC300D7C4BC /* PBXTargetDependency */,
 			);
 			name = 75thAnniversaryTests;
 			productName = 75thAnniversaryTests;
@@ -484,15 +521,18 @@
 				5AE4260219B1105200DC125D /* Donate_Button_1@2x.png in Resources */,
 				F210536019AF141000733590 /* full7b@2x.jpg in Resources */,
 				F210537419AF141000733590 /* full19a@2x.jpg in Resources */,
+				F228432719BE6D3C00D7C4BC /* iOS_app_icon_120x120.png in Resources */,
 				5AE4260819B114C600DC125D /* logo-75-celebrate@2x.png in Resources */,
 				F210528219AE8F0400733590 /* audio8.mp3 in Resources */,
 				F210528919AE8F0400733590 /* audio15.mp3 in Resources */,
 				F210528119AE8F0400733590 /* audio7.mp3 in Resources */,
 				F210536319AF141000733590 /* full7e@2x.jpg in Resources */,
 				F210537619AF141000733590 /* full21a@2x.jpg in Resources */,
+				F228432519BE6D3C00D7C4BC /* iOS_app_icon_58x58.png in Resources */,
 				F210535819AF141000733590 /* full1a@2x.jpg in Resources */,
 				F210537319AF141000733590 /* full18a@2x.jpg in Resources */,
 				F210536919AF141000733590 /* full9f@2x.jpg in Resources */,
+				F228433319BE722900D7C4BC /* Default.png in Resources */,
 				5A3F12A119B3BD0D007A0933 /* new_75_celebrate@2x.png in Resources */,
 				F210528819AE8F0400733590 /* audio14.mp3 in Resources */,
 				5A3F12A919B3C5DA007A0933 /* Grid_button_Pressed@2x.png in Resources */,
@@ -512,6 +552,7 @@
 				F210528A19AE8F0400733590 /* audio16.mp3 in Resources */,
 				F210535F19AF141000733590 /* full7a@2x.jpg in Resources */,
 				F210527D19AE8F0400733590 /* audio3.mp3 in Resources */,
+				F228433419BE722900D7C4BC /* Default@2x.png in Resources */,
 				F210535A19AF141000733590 /* full3a@2x.jpg in Resources */,
 				5AE4260119B1105200DC125D /* Donate Button_Pressed.png in Resources */,
 				F210528719AE8F0400733590 /* audio13.mp3 in Resources */,
@@ -522,6 +563,7 @@
 				F210536219AF141000733590 /* full7d@2x.jpg in Resources */,
 				F210537B19AFB5BD00733590 /* Donate Button.png in Resources */,
 				F210535E19AF141000733590 /* full6a@2x.jpg in Resources */,
+				F228432619BE6D3C00D7C4BC /* iOS_app_icon_80x80.png in Resources */,
 				F210528019AE8F0400733590 /* audio6.mp3 in Resources */,
 				F210536619AF141000733590 /* full9b@2x.jpg in Resources */,
 				F210536F19AF141000733590 /* full14a@2x.jpg in Resources */,
@@ -541,8 +583,10 @@
 				F210528C19AE8F0400733590 /* audio18.mp3 in Resources */,
 				5A95C14E19B7A6FB0087453D /* Share_Button_Pressed@2x.png in Resources */,
 				F210536C19AF141000733590 /* full11a@2x.jpg in Resources */,
+				F228433519BE722900D7C4BC /* Default-568h@2x.png in Resources */,
 				F243A98E19AE69B200EB8CBB /* iconVideoFacebook@2x.png in Resources */,
 				F210537519AF141000733590 /* full20a@2x.jpg in Resources */,
+				F228433719BE733200D7C4BC /* specialThumb.png in Resources */,
 				F210537019AF141000733590 /* full15a@2x.jpg in Resources */,
 				F210536519AF141000733590 /* full9a@2x.jpg in Resources */,
 				F210536D19AF141000733590 /* full12a@2x.jpg in Resources */,
@@ -590,6 +634,16 @@
 			isa = PBXTargetDependency;
 			target = 5A77CA8519AD5730007B3C77 /* 75thAnniversary */;
 			targetProxy = 5A77CAAC19AD5730007B3C77 /* PBXContainerItemProxy */;
+		};
+		F228432B19BE6DC200D7C4BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A77CA8519AD5730007B3C77 /* 75thAnniversary */;
+			targetProxy = F228432A19BE6DC200D7C4BC /* PBXContainerItemProxy */;
+		};
+		F228432D19BE6DC300D7C4BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A77CA8519AD5730007B3C77 /* 75thAnniversary */;
+			targetProxy = F228432C19BE6DC300D7C4BC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -699,12 +753,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversary/75thAnniversary-Info.plist";
+				PRODUCT_MODULE_NAME = 75thAnniversary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -715,12 +769,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversary/75thAnniversary-Info.plist";
+				PRODUCT_MODULE_NAME = 75thAnniversary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -730,7 +784,7 @@
 		5A77CABC19AD5730007B3C77 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -747,7 +801,7 @@
 				INFOPLIST_FILE = "75thAnniversaryTests/75thAnniversaryTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -755,7 +809,7 @@
 		5A77CABD19AD5730007B3C77 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -768,7 +822,7 @@
 				INFOPLIST_FILE = "75thAnniversaryTests/75thAnniversaryTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
