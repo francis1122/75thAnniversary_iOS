@@ -56,7 +56,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(startAnimation) userInfo:nil repeats:YES];
-    [_backgroundMusicPlayer play];
+    //[_backgroundMusicPlayer play];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"AudioNotification"
                                                         object:self];
