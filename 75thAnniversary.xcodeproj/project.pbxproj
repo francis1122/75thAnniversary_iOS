@@ -75,7 +75,6 @@
 		F24BE2BA19C0374000AE23BD /* audio0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F24BE2A319C0374000AE23BD /* audio0.mp3 */; };
 		F24BE2BB19C0374000AE23BD /* audio1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F24BE2A419C0374000AE23BD /* audio1.mp3 */; };
 		F24BE2BC19C0374000AE23BD /* audio2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F24BE2A519C0374000AE23BD /* audio2.mp3 */; };
-		F24BE2BD19C0374000AE23BD /* audio3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F24BE2A619C0374000AE23BD /* audio3.mp3 */; };
 		F24BE2BE19C0374000AE23BD /* audio4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F24BE2A719C0374000AE23BD /* audio4.mp3 */; };
 		F24BE2BF19C0374000AE23BD /* audio5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F24BE2A819C0374000AE23BD /* audio5.mp3 */; };
 		F24BE2C019C0374000AE23BD /* audio6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F24BE2A919C0374000AE23BD /* audio6.mp3 */; };
@@ -95,6 +94,7 @@
 		F24BE2CE19C0374000AE23BD /* audio20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F24BE2B719C0374000AE23BD /* audio20.mp3 */; };
 		F24BE2CF19C0374000AE23BD /* audio21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F24BE2B819C0374000AE23BD /* audio21.mp3 */; };
 		F24BE2D019C0374000AE23BD /* audio22.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F24BE2B919C0374000AE23BD /* audio22.mp3 */; };
+		F24BE2D219C0DDAF00AE23BD /* audio3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F24BE2D119C0DDAF00AE23BD /* audio3.mp3 */; };
 		F2B92DCC19AD719600A49BA1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B92DCA19AD719600A49BA1 /* DetailViewController.m */; };
 		F2B92DCF19AD769A00A49BA1 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B92DCE19AD769A00A49BA1 /* placeholder@2x.png */; };
 		F2B92DD119AD780A00A49BA1 /* google@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B92DD019AD780A00A49BA1 /* google@2x.png */; };
@@ -200,7 +200,6 @@
 		F24BE2A319C0374000AE23BD /* audio0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio0.mp3; sourceTree = "<group>"; };
 		F24BE2A419C0374000AE23BD /* audio1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio1.mp3; sourceTree = "<group>"; };
 		F24BE2A519C0374000AE23BD /* audio2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio2.mp3; sourceTree = "<group>"; };
-		F24BE2A619C0374000AE23BD /* audio3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio3.mp3; sourceTree = "<group>"; };
 		F24BE2A719C0374000AE23BD /* audio4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio4.mp3; sourceTree = "<group>"; };
 		F24BE2A819C0374000AE23BD /* audio5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio5.mp3; sourceTree = "<group>"; };
 		F24BE2A919C0374000AE23BD /* audio6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio6.mp3; sourceTree = "<group>"; };
@@ -220,6 +219,7 @@
 		F24BE2B719C0374000AE23BD /* audio20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio20.mp3; sourceTree = "<group>"; };
 		F24BE2B819C0374000AE23BD /* audio21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio21.mp3; sourceTree = "<group>"; };
 		F24BE2B919C0374000AE23BD /* audio22.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio22.mp3; sourceTree = "<group>"; };
+		F24BE2D119C0DDAF00AE23BD /* audio3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio3.mp3; sourceTree = "<group>"; };
 		F2A74CB919B122E5008762B6 /* logo-75-celebrate_Top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-75-celebrate_Top.png"; sourceTree = "<group>"; };
 		F2B92DC919AD719600A49BA1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F2B92DCA19AD719600A49BA1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
@@ -349,7 +349,7 @@
 				F24BE2A319C0374000AE23BD /* audio0.mp3 */,
 				F24BE2A419C0374000AE23BD /* audio1.mp3 */,
 				F24BE2A519C0374000AE23BD /* audio2.mp3 */,
-				F24BE2A619C0374000AE23BD /* audio3.mp3 */,
+				F24BE2D119C0DDAF00AE23BD /* audio3.mp3 */,
 				F24BE2A719C0374000AE23BD /* audio4.mp3 */,
 				F24BE2A819C0374000AE23BD /* audio5.mp3 */,
 				F24BE2A919C0374000AE23BD /* audio6.mp3 */,
@@ -548,7 +548,6 @@
 				F210535919AF141000733590 /* full2a@2x.jpg in Resources */,
 				F210537219AF141000733590 /* full18a@2x.jpg in Resources */,
 				F210535F19AF141000733590 /* full8a@2x.jpg in Resources */,
-				F24BE2BD19C0374000AE23BD /* audio3.mp3 in Resources */,
 				F24BE2CC19C0374000AE23BD /* audio18.mp3 in Resources */,
 				F228433419BE722900D7C4BC /* Default@2x.png in Resources */,
 				F24BE2C019C0374000AE23BD /* audio6.mp3 in Resources */,
@@ -560,6 +559,7 @@
 				F24BE2C719C0374000AE23BD /* audio13.mp3 in Resources */,
 				F210536719AF141000733590 /* full10d@2x.jpg in Resources */,
 				F210536219AF141000733590 /* full8d@2x.jpg in Resources */,
+				F24BE2D219C0DDAF00AE23BD /* audio3.mp3 in Resources */,
 				F210537B19AFB5BD00733590 /* Donate Button.png in Resources */,
 				F210535E19AF141000733590 /* full7a@2x.jpg in Resources */,
 				F210536619AF141000733590 /* full10b@2x.jpg in Resources */,
