@@ -36,7 +36,7 @@
     [super viewDidLoad];
     
     [self.toolbar setAlpha:0.0];
-    _pageImages = @[@[@"full1a"], @[@"full2a"], @[@"full3a"], @[@"full4a"], @[@"full5a"], @[@"full6a"], @[@"full7a"], @[@"full8a", @"full8b", @"full8c", @"full8d", @"full8e"], @[@"full9a"], @[@"full10a", @"full10b", @"full10c", @"full10d", @"full10e", @"full10f"], @[@"full11a"], @[@"full12a"], @[@"full13a"], @[@"full14a"],@[@"full15a"],@[@"full16a"],@[@"full17a"],@[@"full18a"],@[@"full19a"],@[@"full20a"],@[@"full21a"],@[@"full22a"]];
+    _pageImages = @[@[@"full0a"], @[@"full1a"], @[@"full2a"], @[@"full3a"], @[@"full4a"], @[@"full5a"], @[@"full6a"], @[@"full7a"], @[@"full8a", @"full8b", @"full8c", @"full8d", @"full8e"], @[@"full9a"], @[@"full10a", @"full10b", @"full10c", @"full10d", @"full10e", @"full10f"], @[@"full11a"], @[@"full12a"], @[@"full13a"], @[@"full14a"],@[@"full15a"],@[@"full16a"],@[@"full17a"],@[@"full18a"],@[@"full19a"],@[@"full20a"],@[@"full21a"],@[@"full22a"]];
     
     // Create page view controller
     //self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];

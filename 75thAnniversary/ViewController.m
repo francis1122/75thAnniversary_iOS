@@ -12,7 +12,7 @@
 
 #define IS_IPHONE_5 ( [ [ UIScreen mainScreen ] bounds ].size.width == 568 )
 
-#define NUM_OF_IMGS 22
+#define NUM_OF_IMGS 23
 
 @interface ViewController ()
 
@@ -92,7 +92,7 @@
     
         for (int i = 0; i<NUM_OF_IMGS; ++i) {
             
-            UIImage *IMG = [UIImage imageNamed: [NSString stringWithFormat:@"full%ia.jpg", (i+1)]];
+            UIImage *IMG = [UIImage imageNamed: [NSString stringWithFormat:@"full%ia.jpg", (i)]];
             UIImage *image = [self imageWithImage:IMG scaledToFillSize:CGSizeMake(squareSize, squareSize)];
             if (!image) continue;
             
@@ -101,7 +101,7 @@
             button.backgroundColor = [UIColor blackColor];
             [button setImage:image forState:UIControlStateNormal];
             [button addTarget:self action:@selector(thumbnailTouched:) forControlEvents:UIControlEventTouchUpInside];
-            button.tag = i+1;
+            button.tag = i;
             //button.imageView.contentMode = UIViewContentModeScaleAspectFit;
             button.imageView.contentMode = UIViewContentModeRedraw;
             
@@ -134,7 +134,7 @@
     yMargin = xMargin;
     
     
-    UIImage *IMG = [UIImage imageNamed:@"specialThumb"];
+    UIImage *IMG = [UIImage imageNamed:@"special_thumb@2x.jpg"];
     //UIImage *image = [self imageWithImage:IMG scaledToFillSize:CGSizeMake(squareSize, squareSize)];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -165,7 +165,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"transition"]) {
         DetailViewController *DVC = (DetailViewController*)segue.destinationViewController;
-        DVC.index = ((UIButton*)sender).tag-1;
+        DVC.index = ((UIButton*)sender).tag;
     }
 }
 
