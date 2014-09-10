@@ -12,7 +12,7 @@
 
 #define IS_IPHONE_5 ( [ [ UIScreen mainScreen ] bounds ].size.width == 568 )
 
-#define NUM_OF_IMGS 21
+#define NUM_OF_IMGS 22
 
 @interface ViewController ()
 
