@@ -132,7 +132,7 @@
 		5A3F129E19B3BD0D007A0933 /* new_Donate_Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_Donate_Button@2x.png"; sourceTree = "<group>"; };
 		5A3F12A619B3C5DA007A0933 /* Grid_button_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Grid_button_@2x.png"; sourceTree = "<group>"; };
 		5A3F12A719B3C5DA007A0933 /* Grid_button_Pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Grid_button_Pressed@2x.png"; sourceTree = "<group>"; };
-		5A77CA8619AD5730007B3C77 /* 75thAnniversary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 75thAnniversary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A77CA8619AD5730007B3C77 /* AllHands75.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllHands75.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A77CA8919AD5730007B3C77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A77CA8B19AD5730007B3C77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5A77CA8D19AD5730007B3C77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -146,7 +146,7 @@
 		5A77CA9E19AD5730007B3C77 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5A77CA9F19AD5730007B3C77 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5A77CAA119AD5730007B3C77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5A77CAA719AD5730007B3C77 /* 75thAnniversaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 75thAnniversaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A77CAA719AD5730007B3C77 /* AllHands75.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllHands75.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A77CAA819AD5730007B3C77 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5A77CAB019AD5730007B3C77 /* 75thAnniversaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "75thAnniversaryTests-Info.plist"; sourceTree = "<group>"; };
 		5A77CAB219AD5730007B3C77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -268,8 +268,8 @@
 		5A77CA8719AD5730007B3C77 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A77CA8619AD5730007B3C77 /* 75thAnniversary.app */,
-				5A77CAA719AD5730007B3C77 /* 75thAnniversaryTests.xctest */,
+				5A77CA8619AD5730007B3C77 /* AllHands75.app */,
+				5A77CAA719AD5730007B3C77 /* AllHands75.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -452,7 +452,7 @@
 			);
 			name = 75thAnniversary;
 			productName = 75thAnniversary;
-			productReference = 5A77CA8619AD5730007B3C77 /* 75thAnniversary.app */;
+			productReference = 5A77CA8619AD5730007B3C77 /* AllHands75.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5A77CAA619AD5730007B3C77 /* 75thAnniversaryTests */ = {
@@ -472,7 +472,7 @@
 			);
 			name = 75thAnniversaryTests;
 			productName = 75thAnniversaryTests;
-			productReference = 5A77CAA719AD5730007B3C77 /* 75thAnniversaryTests.xctest */;
+			productReference = 5A77CAA719AD5730007B3C77 /* AllHands75.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -493,7 +493,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5A77CA8119AD5730007B3C77 /* Build configuration list for PBXProject "75thAnniversary" */;
+			buildConfigurationList = 5A77CA8119AD5730007B3C77 /* Build configuration list for PBXProject "AllHands75" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -695,8 +695,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -714,7 +714,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "c8b84a27-04d9-4c17-ad03-3ef02da04fac";
+				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -735,8 +735,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -747,7 +747,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "c8b84a27-04d9-4c17-ad03-3ef02da04fac";
+				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -757,14 +757,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversary/75thAnniversary-Info.plist";
 				PRODUCT_MODULE_NAME = 75thAnniversary;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c8b84a27-04d9-4c17-ad03-3ef02da04fac";
+				PRODUCT_NAME = AllHands75;
+				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -773,14 +773,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversary/75thAnniversary-Info.plist";
 				PRODUCT_MODULE_NAME = 75thAnniversary;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c8b84a27-04d9-4c17-ad03-3ef02da04fac";
+				PRODUCT_NAME = AllHands75;
+				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -789,8 +789,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -803,8 +803,8 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "75thAnniversaryTests/75thAnniversaryTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = AllHands75;
+				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -814,8 +814,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -824,8 +824,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversaryTests/75thAnniversaryTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = AllHands75;
+				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -847,8 +847,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -859,7 +859,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "c8b84a27-04d9-4c17-ad03-3ef02da04fac";
+				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -869,14 +869,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversary/75thAnniversary-Info.plist";
 				PRODUCT_MODULE_NAME = 75thAnniversary;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c8b84a27-04d9-4c17-ad03-3ef02da04fac";
+				PRODUCT_NAME = AllHands75;
+				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "ad-hoc";
@@ -885,8 +885,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -895,8 +895,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversaryTests/75thAnniversaryTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = AllHands75;
+				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -905,7 +905,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A77CA8119AD5730007B3C77 /* Build configuration list for PBXProject "75thAnniversary" */ = {
+		5A77CA8119AD5730007B3C77 /* Build configuration list for PBXProject "AllHands75" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A77CAB619AD5730007B3C77 /* Debug */,
