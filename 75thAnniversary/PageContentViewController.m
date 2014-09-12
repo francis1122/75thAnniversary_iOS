@@ -11,6 +11,7 @@
 @interface PageContentViewController (){
     int pageCount;
     NSTimer *timer;
+    BOOL stop;
 }
 
 @end
@@ -40,7 +41,7 @@
     pageCount = 0;
     self.backgroundImageView.image = [self getImageForIndex:pageCount];
     
-    NSString *audioPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"audio%d", (int)self.pageIndex+1] ofType:@"mp3"];
+    NSString *audioPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"audio%d", (int)self.pageIndex] ofType:@"mp3"];
     NSError *error;
     _backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:audioPath] error:&error];
 
@@ -55,16 +56,25 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    stop = NO;
     timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(startAnimation) userInfo:nil repeats:YES];
-    [_backgroundMusicPlayer play];
+    [self performSelector:@selector(playAudio) withObject:nil afterDelay:.5];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"AudioNotification"
-                                                        object:self];
+
 }
 
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
+-(void)playAudio{
+    if(!stop){
+        [_backgroundMusicPlayer play];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"AudioNotification"
+                                                        object:self];
+    }
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
     [_backgroundMusicPlayer stop];
+    stop = YES;
     [timer invalidate];
     timer = nil;
 }

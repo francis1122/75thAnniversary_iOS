@@ -122,7 +122,11 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fNM-Mt-gtf"/>
                                     <barButtonItem systemItem="play" id="rXG-BN-8fr"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="DW8-TH-TA2"/>
-                                    <barButtonItem style="plain" systemItem="action" id="wYp-5A-TaT" userLabel="share"/>
+                                    <barButtonItem style="plain" systemItem="action" id="wYp-5A-TaT" userLabel="share">
+                                        <connections>
+                                            <action selector="shareButtonTouched:" destination="idG-LH-VDK" id="P2s-8r-PP0"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.29803921568627451" green="0.66274509803921566" blue="0.25882352941176467" alpha="1" colorSpace="deviceRGB"/>
                             </toolbar>

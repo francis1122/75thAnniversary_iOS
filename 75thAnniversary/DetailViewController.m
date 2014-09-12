@@ -342,6 +342,8 @@
         UIBarButtonItem *button = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(resumePlaying)];
         [self replacePlayButton:button];
         [contentViewController.backgroundMusicPlayer pause];
+    }else{
+        [self resumePlaying];
     }
 }
 
@@ -352,6 +354,8 @@
         UIBarButtonItem *button = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(pausePlaying)];
         [self replacePlayButton:button];
         [contentViewController.backgroundMusicPlayer play];
+    }else{
+        [self pausePlaying];
     }
     
     NSLog(@"resume tap");
@@ -423,6 +427,12 @@
 - (void)audioPlayerEndInterruption:(AVAudioPlayer *)player NS_DEPRECATED_IOS(2_2, 6_0){
     
 }
+
+
+
+
+
+
 
 
 @end

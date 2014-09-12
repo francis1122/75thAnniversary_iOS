@@ -20,11 +20,6 @@
 		5A77CA9D19AD5730007B3C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A77CA9B19AD5730007B3C77 /* Main.storyboard */; };
 		5A77CAA019AD5730007B3C77 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A77CA9F19AD5730007B3C77 /* ViewController.m */; };
 		5A77CAA219AD5730007B3C77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A77CAA119AD5730007B3C77 /* Images.xcassets */; };
-		5A77CAA919AD5730007B3C77 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A77CAA819AD5730007B3C77 /* XCTest.framework */; };
-		5A77CAAA19AD5730007B3C77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A77CA8919AD5730007B3C77 /* Foundation.framework */; };
-		5A77CAAB19AD5730007B3C77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A77CA8D19AD5730007B3C77 /* UIKit.framework */; };
-		5A77CAB319AD5730007B3C77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A77CAB119AD5730007B3C77 /* InfoPlist.strings */; };
-		5A77CAB519AD5730007B3C77 /* _5thAnniversaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A77CAB419AD5730007B3C77 /* _5thAnniversaryTests.m */; };
 		5A95C14E19B7A6FB0087453D /* Share_Button_Pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A95C14C19B7A6FB0087453D /* Share_Button_Pressed@2x.png */; };
 		5A95C14F19B7A6FB0087453D /* Share_Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A95C14D19B7A6FB0087453D /* Share_Button@2x.png */; };
 		5A95C15019B7A7E60087453D /* new_Donate_Button_Pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F129D19B3BD0D007A0933 /* new_Donate_Button_Pressed@2x.png */; };
@@ -102,30 +97,6 @@
 		F2C023A119AD89820019663B /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C023A019AD89820019663B /* CustomSegue.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5A77CAAC19AD5730007B3C77 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5A77CA7E19AD5730007B3C77 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A77CA8519AD5730007B3C77;
-			remoteInfo = 75thAnniversary;
-		};
-		F228432A19BE6DC200D7C4BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5A77CA7E19AD5730007B3C77 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A77CA8519AD5730007B3C77;
-			remoteInfo = 75thAnniversary;
-		};
-		F228432C19BE6DC300D7C4BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5A77CA7E19AD5730007B3C77 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A77CA8519AD5730007B3C77;
-			remoteInfo = 75thAnniversary;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		5A3F129C19B3BD0D007A0933 /* new_75_celebrate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_75_celebrate@2x.png"; sourceTree = "<group>"; };
 		5A3F129D19B3BD0D007A0933 /* new_Donate_Button_Pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_Donate_Button_Pressed@2x.png"; sourceTree = "<group>"; };
@@ -146,7 +117,6 @@
 		5A77CA9E19AD5730007B3C77 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5A77CA9F19AD5730007B3C77 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5A77CAA119AD5730007B3C77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5A77CAA719AD5730007B3C77 /* AllHands75.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllHands75.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A77CAA819AD5730007B3C77 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5A77CAB019AD5730007B3C77 /* 75thAnniversaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "75thAnniversaryTests-Info.plist"; sourceTree = "<group>"; };
 		5A77CAB219AD5730007B3C77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -242,16 +212,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A77CAA419AD5730007B3C77 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5A77CAA919AD5730007B3C77 /* XCTest.framework in Frameworks */,
-				5A77CAAB19AD5730007B3C77 /* UIKit.framework in Frameworks */,
-				5A77CAAA19AD5730007B3C77 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -269,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				5A77CA8619AD5730007B3C77 /* AllHands75.app */,
-				5A77CAA719AD5730007B3C77 /* AllHands75.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -455,26 +414,6 @@
 			productReference = 5A77CA8619AD5730007B3C77 /* AllHands75.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5A77CAA619AD5730007B3C77 /* 75thAnniversaryTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5A77CABB19AD5730007B3C77 /* Build configuration list for PBXNativeTarget "75thAnniversaryTests" */;
-			buildPhases = (
-				5A77CAA319AD5730007B3C77 /* Sources */,
-				5A77CAA419AD5730007B3C77 /* Frameworks */,
-				5A77CAA519AD5730007B3C77 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5A77CAAD19AD5730007B3C77 /* PBXTargetDependency */,
-				F228432B19BE6DC200D7C4BC /* PBXTargetDependency */,
-				F228432D19BE6DC300D7C4BC /* PBXTargetDependency */,
-			);
-			name = 75thAnniversaryTests;
-			productName = 75thAnniversaryTests;
-			productReference = 5A77CAA719AD5730007B3C77 /* AllHands75.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -486,10 +425,6 @@
 				TargetAttributes = {
 					5A77CA8519AD5730007B3C77 = {
 						DevelopmentTeam = 3P72J4M974;
-					};
-					5A77CAA619AD5730007B3C77 = {
-						DevelopmentTeam = 3P72J4M974;
-						TestTargetID = 5A77CA8519AD5730007B3C77;
 					};
 				};
 			};
@@ -507,7 +442,6 @@
 			projectRoot = "";
 			targets = (
 				5A77CA8519AD5730007B3C77 /* 75thAnniversary */,
-				5A77CAA619AD5730007B3C77 /* 75thAnniversaryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -599,14 +533,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A77CAA519AD5730007B3C77 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5A77CAB319AD5730007B3C77 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -623,33 +549,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A77CAA319AD5730007B3C77 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5A77CAB519AD5730007B3C77 /* _5thAnniversaryTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5A77CAAD19AD5730007B3C77 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5A77CA8519AD5730007B3C77 /* 75thAnniversary */;
-			targetProxy = 5A77CAAC19AD5730007B3C77 /* PBXContainerItemProxy */;
-		};
-		F228432B19BE6DC200D7C4BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5A77CA8519AD5730007B3C77 /* 75thAnniversary */;
-			targetProxy = F228432A19BE6DC200D7C4BC /* PBXContainerItemProxy */;
-		};
-		F228432D19BE6DC300D7C4BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5A77CA8519AD5730007B3C77 /* 75thAnniversary */;
-			targetProxy = F228432C19BE6DC300D7C4BC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5A77CA9219AD5730007B3C77 /* InfoPlist.strings */ = {
@@ -695,8 +595,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -714,7 +614,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
+				PROVISIONING_PROFILE = "59c866e8-a6ed-4d30-a87c-78b6889dd4a2";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -735,8 +635,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -747,7 +647,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
+				PROVISIONING_PROFILE = "59c866e8-a6ed-4d30-a87c-78b6889dd4a2";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -757,14 +657,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversary/75thAnniversary-Info.plist";
 				PRODUCT_MODULE_NAME = 75thAnniversary;
 				PRODUCT_NAME = AllHands75;
-				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
+				PROVISIONING_PROFILE = "59c866e8-a6ed-4d30-a87c-78b6889dd4a2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -773,61 +673,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversary/75thAnniversary-Info.plist";
 				PRODUCT_MODULE_NAME = 75thAnniversary;
 				PRODUCT_NAME = AllHands75;
-				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
+				PROVISIONING_PROFILE = "59c866e8-a6ed-4d30-a87c-78b6889dd4a2";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		5A77CABC19AD5730007B3C77 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "75thAnniversaryTests/75thAnniversaryTests-Info.plist";
-				PRODUCT_NAME = AllHands75;
-				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		5A77CABD19AD5730007B3C77 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
-				INFOPLIST_FILE = "75thAnniversaryTests/75thAnniversaryTests-Info.plist";
-				PRODUCT_NAME = AllHands75;
-				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -847,8 +701,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -859,7 +713,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
+				PROVISIONING_PROFILE = "59c866e8-a6ed-4d30-a87c-78b6889dd4a2";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -869,36 +723,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Scorca (Y22ZN3DC2B)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
 				INFOPLIST_FILE = "75thAnniversary/75thAnniversary-Info.plist";
 				PRODUCT_MODULE_NAME = 75thAnniversary;
 				PRODUCT_NAME = AllHands75;
-				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
+				PROVISIONING_PROFILE = "59c866e8-a6ed-4d30-a87c-78b6889dd4a2";
 				WRAPPER_EXTENSION = app;
-			};
-			name = "ad-hoc";
-		};
-		F24BE2A019BE7D1A00AE23BD /* ad-hoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Episcopal Relief & Development (8QZX93N6VZ)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "75thAnniversary/75thAnniversary-Prefix.pch";
-				INFOPLIST_FILE = "75thAnniversaryTests/75thAnniversaryTests-Info.plist";
-				PRODUCT_NAME = AllHands75;
-				PROVISIONING_PROFILE = "fff41783-1739-407c-8873-3b688ca4d990";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/75thAnniversary.app/75thAnniversary";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = "ad-hoc";
 		};
@@ -921,16 +754,6 @@
 				5A77CAB919AD5730007B3C77 /* Debug */,
 				5A77CABA19AD5730007B3C77 /* Release */,
 				F24BE29F19BE7D1A00AE23BD /* ad-hoc */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5A77CABB19AD5730007B3C77 /* Build configuration list for PBXNativeTarget "75thAnniversaryTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5A77CABC19AD5730007B3C77 /* Debug */,
-				5A77CABD19AD5730007B3C77 /* Release */,
-				F24BE2A019BE7D1A00AE23BD /* ad-hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
